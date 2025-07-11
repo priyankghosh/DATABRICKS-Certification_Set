@@ -1,0 +1,421 @@
+
+Identify Databricks SQL dashboards as a place to display the results of multiple queries at once.
+Identify Databricks SQL dashboards as a place to display the results of multiple queries at once.
+
+
+Describe the key audience and side audience for Databricks
+The key audience include data analysts, data scientists and business intelligence professionals. Side audiences include data engineers and data admins.
+
+
+Describe that a variety of users can view and run Databricks SQL dashboards as stakeholders
+Stakeholders are users granted access but not edit permissions to a dashboard. This is for stakeholders that need to view and interact with the data on dashboards to gain insights. They can view and interact with data, share the dashboards, receive notifications and drill down into data points.
+
+
+Describe the benefits of using Databricks SQL for in-Lakehouse platform data processing
+4 main benefits:
+-Allows users to query and analyse data stored in data lakes and data warehouses using SQL
+-Built on top of the Databricks Lakehouse platform, provides a unified platform for data engineering, data science, and analytics
+-Provides a high-performance query engine that is optimized for big data workloads
+-Provides a range of tools and features for data processing, including data visualization, data transformation, and machine learning
+
+
+Describe how to complete a basic Databricks SQL query
+1. Open SQL editor
+2. Select a SQL warehouse
+3. Type in your query
+4. Click Run
+5. If you want to save the query, click Save
+
+
+Where should you write and run SQL code?
+In Databricks SQL queries
+
+
+Identify the information displayed in the schema browser from the Query Editor page
+In the schema browser you can view available data objects. You find a list of available databases, tables, columns and data types. You can also use it to explore the structure of your data.
+
+
+Describe how to complete a basic Databricks SQL dashboard
+1. Execute your SQL queries
+2. Click on the Dashboard icon in the sidebar
+3. Click on new dashboard to create a new dashboard. Name your dashboard.
+4. Press add tile to add a new tile. Select the visualisation, specify the query and data source and customise the appearance.
+5. Add as many tiles as you want.
+6. Save your dashboard
+
+
+Describe how dashboards can be configured to automatically refresh
+1. Open the dashboard you want to automatically refresh
+2. Click the Schedule button in the top right corner
+3. Select an interval for refreshing
+4. Select the SQL warehouse to use for the refresh
+5. Optionally, subscribe users or destinations to be updated when the dashboard updates
+6. Click save to save the schedule
+
+
+Describe the purpose of Databricks SQL endpoints/warehouses.
+-They provide general compute resources for SQL queries, visualizations, and dashboards.
+-SQL endpoints provide a way to separate the compute resources used for SQL workloads from other workloads in the Databricks workspace.
+-Databricks SQL supports three types of SQL endpoints: Serverless, Pro, and Classic.
+
+
+Identify Serverless Databricks SQL endpoint/warehouses as a quick-starting option
+-A quick-starting option for running SQL queries and visualizations in Databricks.
+-Designed to be easy to set up and use, and provide a cost-effective way to run queries and exploratory analysis
+-Serverless endpoints are optimized for lower-cost, lower-performance workloads compared to Classic and Pro
+
+
+Describe the trade-off between cluster size and cost for Databricks SQLendpoints/warehouses.
+Larger clusters can handle more concurrent queries and larger workloads, but also cost more to run
+
+
+Identify Partner Connect as a tool for implementing simple integrations with a number of other data products
+-provides a simpler alternative to manual partner connections by provisioning the required Azure Databricks resources on your behalf, then passing resource details to the partner
+-allows you to create trial accounts with select Azure Databricks technology partners
+-designed to make it easy to connect your Databricks workspace to partner solutions, without requiring you to manually configure and manage complex integrations
+
+
+Describe how to connect Databricks SQL to ingestion tools like Fivetran
+1. Click Partner Connect
+2. Click Fivetran (or the partner you want)
+3. Enter your info, then click Connect to Fivetran/Partner
+4. A new tab opens in your browser with the partner website. Complete the log in.
+5. Follow the instructions to set up a connector, then set up an destination for the data
+6. In DB, create an endpoint, and a warehouse and table to receive the ingested data
+7. Configure the destination in Fivetran, and Fivetran will then start ingesting your data
+
+
+What should you do if you have an existing partner account?
+Follow the steps to connect to the partner solution manually in the appropriate connection guide. This is because the connection experience in Partner Connect is optimized for new partner accounts.
+
+
+What is small-file upload?
+A solution for importing small text files like lookup tables and quick data integrations!
+
+
+Import from object storage using Databricks SQL
+You can import data from object storage using Databricks SQL by creating an external table that references the data in object storage. You need to enter a path to the data in the storage with a link.
+
+
+When can you ingest directories of files?
+When the files are the same type and have the same schema. DB reads all the files and combines them in a single table
+
+
+Describe how to connect Databricks SQL to visualization tools like Tableau, Power BI, and Looker
+1. Navigate to the Clusters tab. Click create clusters or select an existing one
+2. In the Advanced Options section, select the JDBC/ODBC tab
+3. Follow the instructions to download the JDBC or ODBC driver for your visualisation tool. Configure the tool using the driver.
+
+
+Identify Databricks SQL as a complementary tool for BI partner tool workflows
+By using Databricks SQL as a complementary tool for BI partner tool workflows, you can take advantage of the scalability and performance of the Databricks platform while still using the familiar interface of your BI partner tool.
+
+
+Describe the medallion architecture
+-It's a sequential data organisation and pipeline system of progressively cleaner data
+-consists of three layers: bronze, silver, and gold:
+-The bronze layer contains unvalidated data in its raw state
+-The silver layer represents a validated, enriched version of the data that can be trusted for downstream analytics.
+-The gold layer contains highly refined and aggregated data that powers analytics, machine learning, and production applications.
+
+
+Why is the gold layer as the most common layer for data analysts using Databricks SQL?
+-It contains highly refined and aggregated data that power analytics, machine learning and production applications
+-Data shared with a customer would rarely be stored outside this level.
+-Because aggregations, joins, and filtering are handled before data is written to the gold layer, users should see low latency query performance on data in gold tables
+
+
+Describe the cautions and benefits of working with streaming data
+BENEFITS:
+-real-time insights
+-faster decision-making
+-ability to respond quickly to changing conditions
+CAUTIONS:
+-managing the volume and velocity of data
+-ensuring quality and consistency
+-requires specialised expertise and skills
+
+
+Identify that the Lakehouse allows the mixing of batch and streaming workloads.
+The ability to mix batch and streaming workloads is a key advantage of the Lakehouse, as it allows you to build real-time applications that can process data as it arrives, while also supporting traditional batch processing for historical analysis
+
+
+Describe Delta Lake as a tool for managing data files.
+-One of the key features of Delta Lake is its support for ACID transactions, which ensures data is always in a consistent state
+-It's designed to be highly scalable and can handle large volumes of data
+-Delta Lake provides a number of tools for managing data files, such as VACUUM and OPTIMISE
+
+
+Describe that Delta Lake manages table metadata
+-Provides support for schema evolution meaning you can modify the table over time without having to rewrite the whole table. Schema validation ensures that changes are compatible with exciting data.
+-Delta Lake also provides support for managing table properties, such as the location of the table data and the format of the data files
+
+
+Identify that Delta Lake tables maintain history for a period of time
+Each operation that modifies a Delta Lake table creates a new table version, and you can use the table history to audit operations, rollback a table, or query a table at a specific point in time using time travel. You can retrieve information using the history command.
+
+
+Describe the benefits of Delta Lake within the Lakehouse
+5 MAIN BENEFITS IN THE LAKEHOUSE:
+1. ACID transactions
+2. Scalable metadata handling
+3. Efficient query processing
+4. Schema evolution
+5. Unified platform
+
+
+Describe persistence and scope of tables on Databricks
+There are different tables based on what's required:
+1. Global tables are available across all clusters in a workspace and can be accessed by all users with the appropriate permissions
+2. Cluster-scoped tables are available only within a specific cluster and are not visible to other clusters or users
+3. Notebook-scoped tables are available only within a specific notebook and are not visible to other notebooks or users
+
+Persisting tables in a storage format allows them to be stored on disk and accessed more efficiently, which can improve query performance and reduce query latency.
+
+
+Compare and contrast the behavior of managed and unmanaged tables
+Overall, managed tables are easier to manage and optimize for performance, while unmanaged tables are more flexible and can be faster for large datasets.
+
+Managed tables:
+-Tables managed by DB platform
+-Easy to create and manage, ideal for small to medium-sized datasets
+-Optimised for performance
+
+Unmanaged tables:
+-Not managed by DB platform
+-More flexible than managed tables, ideal for large datasets
+-Faster to load and write data, but require more manual management
+
+
+Identify whether a table is managed or unmanaged
+2 ways:
+
+-In DB UI under catalog, check the info under details
+-In SQL, by using describe extended on your table
+
+
+Explain how the LOCATION keyword changes the default location of database contents
+You can use the LOCATION keyword to specify a location for the data filed for a database or table
+
+
+Use Databricks to create, use, and drop databases, tables, and views
+CREATE: CREATE DATABASE/TABLE/VIEW ______;
+
+USE: USE DATABASE/TABLE/VIEW ______;
+
+DROP: DROP DATABASE/TABLE/VIEW ______;
+
+
+Describe the difference between a view and a temp view
+VIEW:
+-a logical representation of data stored in a table or other view
+-does not store data, but provides a way to access and query underlying data
+-since view doesn't store data, it's persisted in underlying tables. changes to the table will be reflected in the view
+
+TEMP VIEW:
+-view that is not persisted to disk, only available during the session that created it
+-any changes to the underlying data will not reflected in the temporary view
+
+
+How do you explore, preview, and secure data using Data Explorer?
+1. Open Data Explorer
+2. Select a table or view
+3. Preview data using the Preview tab
+4. Secure the data using the permissions tab
+5. Query data in the query tab
+6. Visualise data using the visualise tab
+
+
+Identify the table owner using Data Explorer
+Identify the table owner by using the Details tab in Data Explorer, or using SQL: ALTER TABLE (table) OWNER TO (new owner);
+
+
+Describe the responsibilities of a table owner.
+5 main responsibilities:
+1. Create and manage the table
+2. Ensure data quality
+3. Grant and revoke access
+4. Monitor usage and performance
+5. Ensure compliance
+
+
+Where can you display the result of multiple queries at once?
+Databricks SQL dashboards
+
+
+Define ACID transactions and why it's important
+A- ATOMIC
+C- CONSISTENT
+I- ISOLATED
+D- DURABLE
+
+ACID ensures that database transactions are processed reliably, even in the event of a failure. It provides a high level of data integrity and reliability.
+
+
+Compare and contrast MERGE INTO, INSERT TABLE, and COPY INTO
+MERGE INTO: Merges data from target source to data table based on specified conditions
+
+INSERT TABLE: Used to insert new rows into tables
+
+COPY INTO: Used to load data into a Delta table
+
+
+Compare and contrast roll-up and cube
+ROLLUP: This operation performs aggregation on a data cube by reducing one or more dimensions. (TOP DOWN)
+
+CUBE: This operation performs aggregation on a data cube by creating all possible combinations of dimensions. (BOTTOM DOWN)
+
+
+Use windowing to aggregate time data
+SUM ___ OVER is the command, use to aggregate data over specific time intervals
+
+
+Identify a benefit of having ANSI SQL as the standard in the Lakehouse
+1. Portability (what's written for one database can easily be transferred to another)
+2. Interoperability (provides a common query language that can work across many sources)
+3. Familiarity (Well-established language familiar to many)
+4. Standardisation (provides a standard syntax for SQL)
+
+
+How do you identify, access, and clean silver-level data?
+1. Identify data (Determine what data you need and where it's located)
+2. Access data (obtain necessary permissions or credentials for the data)
+3. Clean data (identify and correct errors, remove duplicates, transform the data)
+
+
+How can you reduce development time and query latency?
+QUERY HISTORY: allows you to easily access and reuse previous queries
+
+CACHING: stores the results of a query in memory, making it faster to retrieve
+
+
+How can you optimise performance using higher-order Spark SQL functions?
+Higher order functions are functions that take other functions as input parameters. They optimise performance by:
+1. Can simplify code (write more readable code by reducing amount of logic and structure (ex: array_contains ( ) to check for a specific value))
+2. Improve performance (can reduce the amount of data that needs to be filtered (ex: filter() can apply a predicate to a dataset))
+3. Use with User Defined Functions to create more complex and powerful transformations (ex: transform ( ) to apply UDFs to each element of an array)
+4. Use with window functions to perform complex and powerful aggregations and calculations (ex: can use collect_list () to collect column into an array, then percentile_approx() to calculate approximate percentile of the values)
+
+
+How do you create and apply UDFs in common scaling scenarios?
+1. Define the UDF (use the udf ( ) function with a Python or lambda function)
+2. Register the UDF ( use spark.udf.register() )
+3. Apply the UDF (use select() and pass the UDF as a parameter)
+
+
+Identify which types of visualizations can be developed in Databricks SQL
+-Bar charts
+-Line charts
+-Area charts
+-Pie charts
+-Heatmaps
+-Histograms
+-Counters
+-Tables
+
+
+Can customizable tables can be used as visualizations within Databricks SQL?
+Yes! You can drag and drop columns and do all kinds of fun stuff
+
+
+Describe how to change the colors of all of the visualizations in a dashboard
+Select the Colors tab to customise the colours of the visualisation
+
+
+Describe how query parameters change the output of underlying queries within a dashboard
+Query parameters filter the data displayed in the dashboard.
+
+When a user interacts with a dashboard with query parameters, the parameter values are passed on to the underlying queries which are then executed with new values.
+
+
+How can you create a query parameter from the distinct output of a different query.
+Use a Query-Based Dropdown List:
+1. Create a query with the distinct values you want in your dropdown list
+2. Click on Create Parameter button in query editor
+3. In Create Parameter, select Query-Based dropdown list
+4. Select the right query
+5. Specify the column that contains the right values
+7. Click create
+
+
+Identify the method for sharing a dashboard with up-to-date results
+1. Open the dashboard
+2. Click the schedule button
+3. In Schedule Dashboard Refresh select the interval you want the dashboard to be refreshed at
+4. Select the Warehouse you want to run the queries
+5. Subscribe users as necessary
+6. Save!
+
+
+Describe the pros and cons of sharing dashboards in different ways
+LINK: Quick and easy, but doesn't provide any access controls
+
+SHARING WITH A GROUP: Provides access control, but you have to manage group membership manually
+
+EMBEDDED: Allows you to integrate dashboard into other applications or webpages, but requires technical expertise to set up
+
+PDF: Useful for sharing a static snapshot with users who don't have Databricks, but doesn't provide interactivity and results could be dated
+
+AUTOMATIC REFRESH: Provides up-to-date data and allows interaction, but requires setting up refresh schedule and access control
+
+
+Identify what happens if a refresh rate is less than the Warehouse's "Auto Stop"
+If the refresh rate is less than the Auto Stop, the warehouse could be stopped between refreshes. This pauses all activity.
+
+To avoid this, make sure the refresh rate is longer than Auto Stop, or make sure the warehouse never automatically stops.
+
+
+Compare and contrast discrete and continuous statistics.
+DISCRETE analyses data that takes on a finite number of values. Examples include mode, median, percentiles.
+
+CONTINUOUS analyses data that take on variations within a range. Examples include mean, standard deviation and correlation coefficient.
+
+
+Describe descriptive statistics
+Statistics used to describe and summarise a dataset. This includes central tendency, variability and distribution.
+
+
+Describe key moments of statistical distributions
+Numerical measurements that describe the shape, centre and spread of the distribution.
+
+
+Compare and contrast key statistical measures
+1. MEAN AND MEDIAN: Mean is average, median is the value in the middle. Mean is sensitive to outliers, median is not.
+
+2. VARIANCE AND STANDARD DEVIATION: Both measures of spread, but SD is the square root of the variance. SD is easier to interpret as it's the same units as original data.
+
+3. SKEWNESS AND KURTOSIS: Both measures of the shape of distribution. Skewness measures degree of asymmetry, kurtosis measures peakedness. Positive skewness means longer right tail, negative longer left tail. High kurtosis is high peaks and heavy tails, low kurtosis low peaks and light tails.
+
+4. RANGE AND INTERQUARTILE RANGE: Measures of spread of data, with IQ range less sensitive to outliers. Range is difference between min and max range, IQ range is between 25th and 75th
+
+
+Describe data enhancement as a common analytics application
+Data enhancement is the process of improving the quality and usefulness of a dataset by adding or enriching with additional information. This includes a variety of techniques such as data cleaning, data integrations, data normalisation and data augmentation.
+
+
+Describe the different techniques of data enhancement
+DATA CLEANING: Identify and correct errors or inconsistencies in the data, such as missing values or incorrect data. Can be done manually or with automated tools.
+
+DATA INTEGRATIONS: Combine data from multiple sources for a more comprehensive dataset. Data mapping and data transformation can be used to integrate the data.
+
+DATA NORMALISATION: Organising the data in a consistent and standardised way. Can involve converting data into a common format.
+
+DATA AUGMENTATION: Adding new data to a dataset to a dataset to improve quality or usefulness. Can involve collecting new data, or using ML for synthetic data.
+
+
+Describe the blending of data between two source applications
+Blending of data can be done using techniques such as:
+
+DATA MAPPING: Identify common fields between two sources and map them to create a unified schema.
+
+DATA TRANSFORMATION: Converting the data into a common format or structure so it can be combined.
+
+DATA AGGREGATION: Summarise the data from each source and combine it into one dataset.
+
+
+Perform last-mile ETL as project-specific data enhancement
+Last-mile ETL refers to the final stage of the ETL (extract, transform, load) process, where data is transformed and enriched to meet the specific needs of a particular project or use case.
+
+
+What is Unity Catalog?
+A unified governance solution for the Lakehouse. It provides centralized access control, auditing, lineage, and data discovery capabilities across Azure Databricks workspaces

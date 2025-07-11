@@ -1,0 +1,266 @@
+What SQL would I write if I wanted to create a catalog called jack_harty_test and create a schema within that catalog called dawd2? (1-2)
+
+CREATE CATALOG IF NOT EXISTS jack_harty_test;
+USE CATALOG jack_harty_test;
+CREATE SCHEMA IF NOT EXISTS dawd2;
+You do not have to use Use when you have a catalog and schema selected. This is located over the query.
+
+What steps should I take within Databricks to upload a csv? (1-2)
+Select the New button on the top of the left pane > File Upload > Drop file in
+
+In order to allow for the "account users" group to SELECT and MODIFY this table, the group also needs to have USE ______ and USE ______ granted. (1-2)
+CATALOG AND SCHEMA
+
+What SQL would I write to make a table called customers based off of another table? Give everything before the word SELECT. (1-2)
+CREATE OR REPLACE TABLE customers AS
+
+Write a SQL query that will add a table that may or may not already exists called managed_table. It is a csv file. The data is located at the parth "url" for the URL. Add the options for it being formatted and copied. (1-2)
+DROP TABLE IF EXISTS managed_table;
+CREATE TABLE managed_table;
+COPY INTO managed_table
+FROM 'url'
+FILEFORMAT = csv
+FORMAT_OPTIONS ('mergeSchema' = 'true',
+'delimeter' = ',',
+'header' = 'true')
+COPY_OPTIONS ('mergeSchema'='true');
+
+What SQL would we write if we wanted to find out more about a table named "mangaged_table" (1-3)
+DESCRIBE EXTENDED manged_table;
+
+Using CREATE TABLE will create what kind of table? (1-4)
+Delta table
+
+The Landing Page is helpful for finding these 5 things. (1-4)
+· Shortcuts
+· Recents and Favorites
+· Documentation Links
+· Links to Release Notes
+· Links to Blog Posts
+
+What is the fastest way to create a visualization form a query that has already been run? (1-4)
+There is a + sign next to the results that will allow you to add it to a dashboard.
+
+Entities within Unity Catalog are referred to as _____ and they are organized ______. (1-5)
+Objects and Hierarchically
+
+What are the levels of the Object Model? (1-5)
+Metastore > Catalogs > Schema > Tables/views
+
+What does the Metastore do? (1-5)
+It stores metadata about data assets (tables and views) and the permissions that govern access to them.
+
+When the Metastore is created, what are the 2 things that are assigned? (1-5)
+Default storage location and Metastore Admin
+
+The Catalog is the first level of _____ ________ _____ (1-5)
+Data asset organization
+
+Schema aka ___ (1-5)
+Database
+
+Users can only see all schemas if they have been granted permission on both the ____ and the ______ (1-5)
+Schema and catalog
+
+A view stores the _____ for a query typically against one or more data sources or tables in the metastore.
+text
+
+Views do not ___ or __ any data (1-5)
+Process or write
+
+_______ ________ are the default behavior for CREATE TABLE and SAVE commands. (1-5)
+Managed Tables
+
+When a managed table is created data files are ______ to the location specified when the parent metastore was created (1-5)
+Copied
+
+Data files are always _____ when creating a managed table thus the operation can be _____. (1-5)
+Copied and costly
+
+To create a _____ table, the CREATE TABLE command is used without a location clause. (1-5)
+Managed
+
+With ____ ____, data is not stored in the metastore's default location (1-5)
+External tables
+
+What is the difference between External and Managed tables? (1-5)
+The location
+
+What kind of table has data that is not stored in the Metastore's default location? (1-5)
+External. It is stored in the location that is specified when the table is created.
+
+Dropping an external table removes the table from the schema, but the ____ _____ ____ are not deleted (1-5)
+Underlying data files
+
+Why is it easy to clone a table to another schema without moving data? (1-5)
+All you need to do is create an external table
+
+What SQL would you write if you needed to use credentials to add an external table to a location? (1-5)
+WITH CREDENTIAL <credential-name>;
+
+What are the 2 ways to specify the 3 elements of Databricks asset organization using CREATE and USE ? (1-5)
+USE catalog.schema;
+SELECT * FROM table;
+
+and
+
+CREATE TABLE catalog.schema.table
+
+Describe the benefits of using databricks SQL for in-Lakehouse platform data processing. (1-6)
+· It is designed to be streamed into and batched into at the same time. (we can stop using the Lambda process)
+· ACID Transactions
+· Open standards
+· Powered buy Apache Spark
+· Converts Streaming and Batch with minimal effort
+
+Which process should you look to use when you want real time analytics. (1-6)
+Streaming over batching, which is better for big data
+
+What are ACID Transactions? (1-6)
+Atomicity, Consistency, Isolation, and Durability. They ensure that your data never falls into an inconsistent state because of an operation that only partially completes
+
+Users might be worried that Databrick will make it difficult to remove their data from Databricks. To address this Databricks has _____ _____ to prevent ___ ____.(1-6)
+Open Standards and Lock In
+
+What are the Data Quality Levels
+Bronze, Silver, Gold
+
+What are the 3 things that the silver layer is known for doing? (1-6)
+Cleanse, join, enrich
+
+What part of the data quality levels would a single source of truth exist at? (1-6)
+Silver layer
+
+Business level aggregates describes which part of the data quality layer? (1-6)
+Gold Layer
+
+What are 3 benefits of the Databricks Data Quality levels aside from its speed? (1-6)
+The ability to use Deletes, Updates and Merges. These features are groundbreaking for data lakes.
+
+What is the name of the dedicated ecosystem of integration that allows users to easily connect with popular data integration, transformation, and BI partner products. (1-7)
+Partner Connect
+
+How does Partner Connect make it easy to connect (5)? (1-7)
+· Make partner integrations in only 6 clicks
+· No context or page switches are required
+· Automatically launches a clused and calls Parter API to pass on the token
+· Sets up necessary configs for optimal experience
+· Creates trial account if you don't already have one
+
+What steps should you take to generate an access token? (1-8)
+Click your username in the upper-right corner of the page, and click "User Settings" >
+Click "Personal access tokens" >
+Click "+ Generate new token"
+
+What is often used to bring 3rd party data sources into Databricks? (1-8)
+Fivetran
+
+3 problems with managing infrastructure (2-1)
+· Lost Productivity (waiting for cluster startup)
+· Admin Effort (manually configure)
+· Cost
+
+What are the 4 benefits of SQL Serverless? (2-1)
+· Managed Servers
+· Instant Compute
+· Optimized Capacity
+· Secure
+
+Why are managed servers beneficial in SQL Serverless? (2-1)
+They are always-running server fleet, and patching and upgrading automatically
+
+Why is instant compute beneficial in SQL Serverless? (2-1)
+<10 sec allocation to users
+No waiting for cluster start up
+
+Why is optimized capacity beneficial in SQL Serverless? (2-1)
+Idle clusters are removed 10 minutes after the last query
+
+How does SQL Serverless secure data? (2-1)
+3 layer isolation with data encryption
+
+3 SQL Serverless Benefits (2-1)
+· Higher Productivity (no waiting for cluster start up)
+· Zero Management (no configuration)
+· Lower Cost (pay for what you consume)
+
+Delta Lake is the ____ ____ ____ that provides the foundation for storing data and tables in the Databricks _____ Platform. (2-2)
+Optimized Storage Layer and Lakehouse
+
+Delta Lake is ____ ____ software that extends _____ data files. (2-2)
+Open source and Parquet
+
+Delta Lake allows you to easily use a single copy of data for both _____ and ____ operations, providing _____ processing at scale. (2-2)
+batch and streaming; and incremental
+
+5 largest differences between Delta Lakehouse and other data warehouses. (2-2)
+· ACID transactions for data stored in data lakes
+· A single source of truth
+· Time travel
+· Schema evolution/enforcement
+· Open architecture
+
+Write a SQL query that will:
+· Create a schema named temporary_schema
+· Create a table in that schema called "simple_table" with columns (width, length, and height), which are all integers.
+· Add values into the table that are 3, 2 and 1 (2-2)
+DROP SCHEMA IF EXISTS temporary_schema CASCADE;
+CREATE SCHEMA IF NOT EXISTS temporary_schema;
+CREATE OR REPLACE TABLE temporary_schema.simple_table (width INT, length INT, height INT);
+INSERT INTO temporary_schema.simple_table VALUES (3, 2, 1);
+
+Do users need to have access to the underlying data to use a VIEW? (2-2)
+No
+
+What should the SQL code be to make a view called high_sales? (everything before SELECT) (2-2)
+CREATE OR REPLACE VIEW high_sales AS
+
+What should the SQL code be to see the changes that have been made to a table called "customers"? (2-2)
+DESCRIBE HISTORY customers;
+
+What should the SQL code be to change all of the values that are 0 to 10 in the column "loyalty_segment" in the table "customers"? (2-2)
+UPDATE customers SET loyalty_segment = 10 WHERE loyalty_segment = 0;
+
+What should the SQL code be to return the column "loyalty_segment" from the table "customers" after the first change to the data? (2-2)
+SELECT loyalty_segment FROM customers VERSION AS OF 1;
+
+What should the SQL code be to change a table back to an earlier version? The table is "customers" and the version is 1. (2-2)
+RESTORE TABLE customers TO VERSION AS OF 1;
+
+Without Unity Catalog, all ____ and table ____ exist within each workspace. This requires the management of security settings on each workspace. (2-3)
+grants and ACLS
+
+Unity catalog can ____ _____ or ____ specific fields from specific users. (2-3)
+Access, Hide or Configure Masking of data. Masking data is showing that the field exists, but they cannot view it
+
+What should the SQL code be when you are ready to add a parameter to the "product_category" column. Sum "total_price" and get it from the "sales" table. (3-3)
+SELECT sum(total_price) FROM sales
+WHERE product_category = '';
+
+What are the steps to creating a query based parameter. Don't need to write out SQL. (3-3)
+1. Write query that returns distinct list of values from column.
+2. Save that Query.
+3. Write a new query with that same column saying WHERE columne = ''.
+4. While between the '', press the + and select parameter.
+5. Type: Query Based Dropdown List
+6. Query: Name of original query
+
+Write code to add an Index for the table "tblEmployee" on Salary (TP)
+Create Index IX_tblEmployee_Salary
+ON tblEmployee (Salary ASC)
+
+What are the benefits of Indexing in SQL? (TP)
+By indexing, the compute can more quickly locate the data you are filtering for and reduce the amount of rows that are searched
+
+The _____ function in SQL generates subtotals and grand totals for a set of columns, allowing for hierarchical grouping and aggregate calculations.
+ROLLUP
+
+How is ROLLUP used in SQL?
+GROUP BY ROLLUP (field1, field2)
+
+The _____ function in SQL generates a result set that includes all possible combinations of the specified columns, providing multiple levels of aggregated data.
+CUBE
+
+How is CUBE used in SQL?
+GROUP BY CUBE (field1, field2)
+

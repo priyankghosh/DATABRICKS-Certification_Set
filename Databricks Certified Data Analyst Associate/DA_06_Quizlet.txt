@@ -1,0 +1,72 @@
+
+Identify the benefits of using Databricks SQL for business intelligence ( BI ) analytics projects over using third - party Bl tools ? A data analyst is trying to determine whether to develop their dashboard in Databricks SQL or a partner business intelligence ( BI ) tool like Tableau , Power BI , or Looker . When is it advantageous to use Databricks SQL instead of using third - party BI tools to develop the dashboard ?
+
+A. When the data being transformed as part of the visualizations is very large
+B. When the visualizations require custom formatting
+C. When the visualizations require production - grade , customizable branding
+D. When the data being transformed is in table format
+A. When the data being transformed as part of the visualizations is very large
+
+
+What is the mistake in the query ?
+
+SELECT region, count(*) AS number_of_customers
+FROM customers
+ORDER BY region;
+
+A. The query is selecting region , but region should only occur in the ORDER BY clause .
+B. The query is missing a GROUP BY region clause .
+C. The query is using ORDER BY , which is not allowed in an aggregation .
+D. The query is using count ( * ) , which will count all the customers in the customers table , no matter the region
+B. The query is missing a GROUP BY region clause
+
+
+Identify code blocks that can be used to create user-defined functions
+A data analyst has created a user-defined function using the following line of code:
+
+CREATE FUNCTION price(spend DOUBLE, units DOUBLE)
+RETURNS DOUBLE
+RETURN spend / units;
+
+Which code block can be used to apply this function to the customer_spend and customer_units columns of the table customer_summary to create column customer_price?
+
+A. SELECT function(price(customer_spend, customer_units)) AS customer_price
+FROM customer_summary
+
+B. SELECT double(price(customer_spend, customer_units)) AS customer_price
+FROM customer_summary
+
+C. SELECT price
+FROM customer_summary
+
+D. SELECT PRICE customer_spend, customer_units AS customer_price
+FROM customer_summary
+
+E. SELECT price(customer_spend, customer_units) AS customer_price
+FROM customer_summary
+E. SELECT price(customer_spend, customer_units) AS customer_price
+FROM customer_summary
+
+
+Objective: Automate a refresh schedule for a query.
+
+Where in the Databricks SQL workspace can a data analyst configure a refresh schedule for a query when the query is not attached to a dashboard or alert?
+
+A. The Dashboard Editor
+B. The Visualization Editor
+C. The Query Editor
+D. SQL Warehouse
+E. Data Explorer
+C. The Query Editor
+3 multiple choice options
+
+
+Objective: Define different types of data augmentation.
+
+A data analyst is working with gold-layer tables to complete an ad-hoc project. A stakeholder has provided the analyst with an additional dataset that can be used to augment the gold-layer tables already in use. Which term is used to describe this data augmentation?
+A. Data testing
+B. Last-mile ETL
+C. Ad-hoc improvements
+D. Data enhancement
+E. Last-mile dashboarding
+D. Data enhancement

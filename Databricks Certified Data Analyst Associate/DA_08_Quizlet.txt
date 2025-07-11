@@ -1,0 +1,1163 @@
+
+The data analysis team wants to perform a rapid analysis of data on the tableau from 2 different data sources and their behavior together, what activity would they be performing
+
+A) Data integration
+B) last-mile ETL
+C) Data enhancement
+D) data blending
+D
+
+
+Which layer in the medallion architecture is best suited for ad-hoc reporting, advanced analytics, and ML?
+
+A) Diamond Layer
+B) Bronze Layer
+C) Gold Layer
+D) Silver Layer
+D
+
+
+What is Delta Sharing?
+
+A) Delta sharing allows data present in only Delta format to be sharable inside the organization only
+B) Delta Sharing is a protocol to share data present inside databricks with other organizations
+C) Delta Sharing is the industry's first open protocol for secure data sharing, making it simple to share data with other organizations regardless of where the data lives
+D) Delta Sharing is a protocol to share data present inside databricks within the organizations
+C
+
+
+Which of these is the incorrect approach to handling Complex Data Types?
+A) Explore and Collect
+B) Support for Complex Data types is yet to be introduced
+C) User Defined Function
+D) Lambda Function
+B
+
+
+On the dashboard, If you have a parameter added to the dashboard, how will it affect the visualizations:
+A) The parameter will be used to fetch data for all the visualizations which use this parameter
+B) The parameter will be used to fetch data for some visualizations but not for others though they use the same parameter
+C) The parameter is not added if a parameterized query/visualization is added
+D) The parameter will not make any difference to the visualizations
+A
+
+
+What are the use of the Delta Lake Transaction log?
+
+A) To provide ACID transaction capabilities
+B) To track changes
+C) All of the above
+D) None of the above
+C
+
+
+Which of the following is NOT a benefit of data governance?
+A) Consistent and high data quality for analytics and machine learning
+B) Data democratization for Decision-making
+C) Increased data complexity
+D) Reduced time to insight
+C
+
+
+Which of the following is incorrect about Auto loader in Databricks SQL:
+A) Loads json, parquet, csv files
+B) Ensures file contents are loaded only once
+C) Removes duplicates in the file
+D) Automatically uploads files
+C
+
+
+What are various warehouse types available in Databricks SQL when creating SQL Warehouse?
+A) Serverless warehouse only
+B) Serverless, Classic, and Pro
+C) Enterprise, OnPrem and Classic
+D) Classic and Pro Warehouse
+B
+
+
+Question 12: Correct
+For Data Ingestion in Databricks SQL using existing files, which of the following format is not supported by Databricks?
+A) Delta
+B) JSON
+C) Parquet
+D) Microsoft Word
+E) CSV
+D
+
+
+There seem to be SSN details in a particular table, it is considered as PII data in US. How should the data engineering team deal with the PII data here?
+
+A) PII data should be encrypted and stored.
+B) PII is Publicly available information
+C) None of the above
+D) PII data doesn't get any additional special handling
+A
+
+
+Databricks can integrate with which of the following BI tools?
+A) Tableau
+B) Qlik
+C) HEX
+D) Power BI
+E) All of the above
+E
+
+
+Which of the following statement is correct to display all the cities with the condition, temperature, and humidity whose humidity is in the range of 60 to 75 from the 'weather' table?
+
+A) SELECT * FROM weather WHERE humidity BETWEEN 60 AND 75
+
+B) SELECT * FROM weather WHERE humidity IN (60 to 75)
+
+C) SELECT * FROM weather WHERE humidity NOT BETWEEN 60 AND 75
+
+D) SELECT * FROM weather WHERE humidity NOT IN (60 AND 75)
+A
+
+
+How are Delta Live Tables and Delta Lake related?
+A) Delta Lake is a subset of Delta Live Table
+B) Delta Live Tables extends the functionality of Delta Lake.
+C) Both are same
+D) None of the above
+B
+
+
+Which of the following is a benefit of Delta Lake?
+A) Time Travel capabilities
+B) All of the above
+C) None of the above
+D) ACID Transactions
+E) Schema Enforcement
+B
+
+
+Which of the following option is not available on the Databricks SQL landing page?
+
+A) Query history
+B) Partner Connect
+C) Recent Queries and Dashboards
+D) Blog posts
+E) Documentation
+A
+
+
+A new data analyst has joined your team. He has recently been added to the company's Databricks workspace as da.analyst@company.com. The data analyst should be able to query the table sales in the database retail. The new data analyst has been granted USAGE on the database retail already.
+Which of the following commands can be used to grant the appropriate permission to the new data analyst?
+
+A) GRANT USAGE ON TABLE sales TO da.analyst@company.com;
+B) GRANT USAGE ON TABLE da.analyst@company.com TO sales;
+C) GRANT SELECT ON TABLE da.analyst@company.com TO sales;
+D) GRANT SELECT ON TABLE sales TO da.analyst@company.com;
+E) GRANT CREATE ON TABLE sales TO da.analyst@company.com;
+D
+
+
+What is Data Cleaning?
+A) This is a process that involves adding additional information to the data
+B) This is a process that involves filling in missing data
+C) This is the process that involves identifying or correcting the errors in the data
+D) This is a process that involves moving the data from the bronze layer to silver layer
+C
+
+
+How to change the owner of the schema to a specific user?
+
+A) Go to SQL Warehouses > Click on the SQL Warehouse > Change owner
+B) Once set, the owner cannot be changed
+C) Go to Workspace > Change Owner
+D) Go to Data Explorer > Click on the schema > Click on owner option under the schema name and change it to the other username
+D
+
+
+How are materialized views refreshed?
+A) Automatically every hour
+B) Manually by the user
+C) Only when there are changes in upstream datasets
+D) According to the updated schedule of the pipeline
+D
+
+
+Which of the following operation(s) is/are possible from Data Explorer?
+A) All of above
+B) View schema details
+C) View Data warehouse, Tables, Locations Detail, Query History, Sample data
+D) None of above
+E) Grant and revoke permissions
+A
+
+
+Which warehouse type supports entry-level performance features and a limited set of Databricks SQL functionality?
+A) Unity Catalog
+B) Pro
+C) Classic
+D) Serverless
+C
+
+
+Which of the following syntax is correct to delete all target rows that have a match in the source table?
+A) MERGE INTO target USING source
+ON target.key = source.key
+WHEN MATCHED THEN DELETE
+
+B) DELETE target USING source
+ON target.key = source.key
+WHEN MATCHED THEN DELETE
+
+C) INNER JOIN target USING source
+ON target.key = source.key
+WHEN MATCHED THEN DELETE
+
+D) COPY INTO target USING source
+ON target.key = source.key
+WHEN MATCHED THEN DELETE
+A
+
+
+How can you change "Thomas" into "Michel" in the "LastName" column in the Users table?
+
+A) UPDATE User SET LastName = 'Thomas' INTO LastName = 'Michel'
+B) MODIFY Users SET LastName = 'Thomas' INTO LastName = 'Michel'
+C) UPDATE Users SET LastName = 'Michel' WHERE LastName = 'Thomas'
+D) MODIFY Users SET LastName = 'Michel' WHERE LastName = 'Thomas'
+C
+
+
+What is MODE in Summary Statistics?
+
+A) MODE in a set of numbers is the number that appears at the top
+B) MODE in a set of numbers is the number that appears at the last
+C) MODE in a set of numbers is the number that appears most frequently
+D) MODE in a set of numbers is the number that appears in the middle
+C
+
+
+Who can see all catalogs in Unity Catalog?
+
+A) Users with the USE CATALOG permission
+B) Users with the ADD CATALOG permission
+C) Users with the MAIN CATALOG permission
+D) Users with the DATA PERMISSION permission
+C
+
+
+Other than Databricks UI, what are other ways to interact with Databricks?
+A) Databricks CLI
+B) All the above
+C) Terraform
+D) None of the above
+E) Using REST API
+B
+
+
+Why are ACID transactions a good thing to have?
+
+A) ACID transactions ensure the query is always executed
+B) ACID transactions ensure 'all-or-none' data execution
+C) None of the above
+D) ACID transactions ensure data never falls into an inconsistent state because of an operation that only partially completes.
+D
+
+
+What is the mean and median of 1,2,3,4,5
+A) Mean: 5, Median: 1
+B) Mean: 1, Median: 3
+C) Mean: 3, Median: 5
+D) Mean: 3, Median: 3
+D
+
+
+A data analyst wants to horizontally combine two tables as part of a query. They want to use a shared column as a key column and only want the query output to contain rows where the value in the key column is present in both tables.
+Which of the following SQL commands can they use to accomplish this task?
+A) OUTER JOIN
+B) LEFT JOIN
+C) COPY INTO
+D) INNER JOIN
+D
+
+
+What are the various permission option(s) available at the database table level?
+
+A) ALL, SELECT, MODIFY, READ_METADATA
+B) None of the above
+C) ALL, SELECT, MODIFY, READ_METADATA, USAGE, CREATE
+D) ALL, SELECT, MODIFY, GRANT
+A
+
+
+Which of the following is incorrect about how we can check if the query results were read from the cache?
+A) Under SQL Editor > Check the Run stats on the bottom of the page for Current Execution> Hover on the run time, shows the stats
+
+B) Under Query History > Go to the Query > Check the IO section
+
+C) Under SQL Warehouses > Go to Query History > Check the IO section
+
+D) Under Queries > Check in the Admin View
+D
+
+
+Which join is to be used between two tables A and B when the resultant table needs rows from A and B that matches the condition and rows from A that do not match the condition?
+
+A) Outer Join
+B) Inner Join
+C) None of the above
+D) Cross Join
+A
+
+
+Which layer tables are "project specific" in nature?
+A) Platinum
+B) Bronze
+C) Gold
+D) Silver
+C
+
+
+Can you manipulate files in managed tables directly using tools outside of Databricks?
+
+A) Only if you have the necessary permissions
+B) It depends on the file format used
+C) Yes, it is recommended to use external tools
+D) No, you should not use tools outside of Databricks
+D
+
+
+How do you check the Query Profile for a select query run on Databricks SQL Editor?
+A) On the Query History Tab
+B) On the Data Tab
+C) On the SQL Editor Tab
+D) On the SQL Warehouses Tab
+A
+
+
+When managing data quality with Delta Live Tables, which of the following is not considered Delta Live Tables expectations?
+
+A) A description, which acts as a unique identifier and allows you to track metrics for the constraint
+
+B) An action to take when a record fails the expectation, meaning the boolean returns false.
+
+C) No action is taken when meaning the boolean returns true.
+
+D) A boolean statement that always returns true or false based on some stated condition.
+C
+
+
+Which of the following do we see on the Queries landing page
+
+A) Ability to view previously run queries by different users, view query profile
+
+B) Ability to create query, list saved queries, filter queries, change workspaces, link to databoard
+
+C) Ability to create query, list saved queries, filter queries, My queries, trash and Admin view
+
+D) Queries, Run date, Run Duration of query, SQL warehouse and user who ran the query
+C
+
+
+Which of the following statement is TRUE about the DISTINCT Clause?
+A) It can be used with aggregate functions such as COUNT, AVG, etc.
+B) It operates only on a single column.
+C) Returns only Distinct values.
+D) All of the above
+D
+
+
+What is discrete statistics?
+A) A branch of statistics that focuses on predicting future data
+B) A branch of statistics that focuses on filling in missing data
+C) A branch of statistics that focuses on summarizing and presenting data
+D) A branch of statistics that can take on only a finite amount of data
+D
+
+
+What does data governance mean when enabled within an organization?
+A) All of the above
+B) Data security and compliance with industry regulations
+C) Data-driven decision-making for everyone
+D) Cost optimization and prevention of large cluster startups
+A
+
+
+Which of the following is not ACID Property?
+A) Distributed
+B) Consistency
+C) Isolation
+D) Atomicity
+A
+
+
+Which of the following open-source projects were founded by Databricks employees?
+A) Delta Lake, ML Flow, Apache Airflow
+B) Redash, Apache DataFu, Apache Delta Spike
+C) Delta Lake, Delta Sharing, MLFlow
+D) Hive, Hadoop, HBase and Delta Lake
+C
+
+
+Which layer in the medallion architecture is mostly used by Data analysts?
+A) Silver layer
+B) Bronze layer
+C) Diamond layer
+D) Gold layer
+D
+
+
+Your business stakeholder would like to be notified whenever the value in the customer_engagement field in the customer's table goes below 70. How can you automate the process?
+A) Create a query and save it
+B) Run the query, send them a text
+C) Create a query alert in the "Alert" tab
+D) Do nothing they will figure it out
+C
+
+
+How can you restrict the number of clusters per users using the UI?
+
+A) To restrict the number of clusters a user can create using a policy, use the Min and Max clusters per user setting under the Permissions tab in the cluster policies UI.
+
+B) To restrict the number of clusters a user can create using a policy, use the Min clusters per user setting under the Permissions tab in the cluster policies UI.
+
+C) To restrict the number of clusters a user can create using a policy, use the Max clusters per user setting under the Permissions tab in the cluster policies UI.
+
+D) Databricks SQL allows an unlimited number of users, there is no restriction
+C
+
+
+The Data Engineering Team has set up a dashboard to monitor the data quality of the data setup in the medallion architecture. They want to label the reports by table type i.e. Bronze, Silver, and Gold.
+How will they achieve that?
+
+A) Use the feature to add text to the dashboard directly.
+B) Use Add option. Click on "Text" and add the text.
+C) Add text to the visualization as there is no way to add text to the Dashboard
+D) Create a PDF and use PDF Writer to label it
+Question
+B
+
+
+Your customer does not have access to the Databricks Infrastructure, however, your project management team wants to send some visualizations you have created, without providing the customer access to Databricks. Which of the following options can you choose?
+
+A) Add a refresh to the dashboard and add the customer email as a subscriber
+B) Export the dashboard as PDF and share the PDF with customers to get their feedback
+C) None of the above
+D) Take a screenshot of the dashboard and share the screenshot with customer over the email
+E) All of the above
+E
+
+
+What data objects are in the Databricks Lakehouse?
+A) Metastore, Managed Table, and External Table
+B) Database, Table, View, and Functions
+C) Catalog, Database, Tables, View, and Function
+D) Hive, Table, Views, UDF, and Delta Live Table
+C
+
+
+Does Databricks support PCI Compliance?
+
+A) No, by default Databrick does not support PCI compliant, however, it is used as managed service from AWS, it inherits PCI complaints supported by AWS
+
+B) Yes, Databricks support HIPAA, PCI-DSS, and FedRAMP Moderate compliance controls
+
+C) HIPAA is a US regulation that includes a variety of protections for protected health information. Databricks doesn't deal with health information
+
+D) None of the above
+B
+
+
+Which of the following is an open protocol for secure data sharing?
+A) Dashboards
+B) Delta Lake house
+C) Delta Sharing
+D) Delta Lake project
+C
+
+
+Which of the following data workloads will utilize a Silver table as its source?
+
+A) A job that queries aggregated data that already feeds into a dashboard
+B) A job that enriches data by parsing its timestamps into a human-readable format
+C) A job that ingests raw data from a streaming source into the Lakehouse
+D) A job that aggregates cleaned data to create standard summary statistics
+E) A job that cleans data by removing malformatted records
+D
+
+
+What is the main catalog in Unity Catalog intended for?
+
+A) Assigning data permissions
+B) Organizing data assets
+C) Organizations just getting started
+D) Adding users and data
+C
+
+
+A Data Analyst has joined your team, however, he is not familiar with Databricks SQL. Which of the following steps will allow him to locate Data Explorer?
+
+A) Go to SQL Warehouse, and click on the "Data Explore" button
+B) Go to SQL Editor, next to Schema Explore, and click on Data Explore to access Data Explorer
+C)Click "Data" in the sidebar menu to access the Data Explorer
+D) On Databricks SQL, landing page, under SQL, click on "Data Explore" next to "SQL Query Editor" to access Data Explorer
+C
+
+
+What is the full form of ETL?
+
+A) Exact, Transform, Lead
+B) Exact, Transition, Lead
+C) Extraordinary, Terraform, Leader
+D) Extract, Transform, Load
+D
+
+
+Unity Catalog unifies data governance and discovery on Databricks. Is this true?
+
+True
+False
+True
+
+
+What is the use of Summary Statistics?
+
+A) It is used to summarize a set of observations, in order to communicate the smallest amount as simple as possible
+B) It is used to summarize a set of observations, in order to communicate the most significant amount
+C) It is used to summarize a set of observations, in order to communicate the largest amount as simple as possible
+D) It is used to summarize a set of observations, in order to communicate the most efficient record as possible
+C
+
+
+Which of the following is the main component of Delta Table?
+
+A) ACID Transaction
+B) Indexing
+C) None of the above
+D) ETL
+E) All of the above
+F) Data Versioning
+E
+
+
+Databricks maintains a number of proprietary tools, which of the following listed is not Databricks proprietary tool?
+A) Photon
+B) Workflows
+C) Unity Catalog
+D) Apache Spark
+D
+
+
+Data Analytics Team is working with census data of the United States. They want to display the population across the different states in the US using different shades of blue on the map. Which visualization would you use?
+
+A) Bar Chart
+B) Funnel
+C) Box plot
+D) Choropleth
+D
+
+
+When you drop managed table, you do not affect the underlying data. Is this true or False?
+False
+True
+False
+
+
+What is descriptive statistics?
+
+A) A branch of statistics that focuses on evaluating a finite amount of data
+B) A branch of statistics that focuses on predicting future data
+C) A branch of statistics that focuses on filling in missing data
+D) A branch of statistics that focuses on summarizing and presenting data
+D
+
+
+How will you configure all warehouses with SQL parameters?
+
+A) In the SQL Configuration Parameters textbox, type ANSI_MODE true and click save
+
+B) None of the above
+
+C) Go to Admin Settings, select the "SQL Warehouse Settings" tab, and in the SQL Configuration Parameters dropdown, change the setting from "disable" to "enable"
+
+D) Go to Admin Setting, change the SQL Configuration Parameter drop-down to "Yes"
+(Incorrect)
+A
+
+
+Your data engineering team has loaded Airport Data with location data, the latitude and longitude data is stored in the same column. The Data Analysis team wants to create a "Marker" visualization. They need to separate the latitude and longitude data. What is this process called?
+
+A) last-mile ETL
+B) data blending
+C) data integration
+D) data enhancement
+A
+
+
+In Databricks SQL, how are temporary view scoped?
+
+A) Temporary views result in the same output irrespective of the environment you are using
+temporary views are scoped to the query level.
+
+B) Multiple statements within the same query can use the temp view, but it cannot be referenced in other queries, even within the same dashboard
+
+C) temporary views are scoped to the warehouse level. It can be referenced in other queries, even within the same dashboard
+
+D) temporary views are scoped to multiple schema levels. It is generally used when you have to query various schema and get data from multiple schemas
+B
+
+
+Databricks has put in place controls to meet the unique compliance needs of highly regulated industries. Is there any data protection and compliance for the users based out of California?
+
+A) CCPA
+B) HIPAA
+C) GDPR
+D) PCI-DSS
+A
+
+
+Which of the following is correct for three-tier namespacing?
+
+A) <catalog>.<database>.<table>
+B) <metastore>.<catalog>.<database>
+C) <database>.<schema>.<manage-table>
+D) <database>.<manage-table>.<external-table>
+A
+
+
+If a user doesn't have access to Databricks SQL, which statement will you use as workspace admin to grant access to the user?
+
+A)
+- Go to User Settings.
+- Click to the Users tab.
+- In the user row, click Databricks SQL access.
+
+B)
+Users can be created only at the time of workspace setup
+
+C)
+- Go to Workspace.
+- Select the workspace, then Click to the Users tab.
+- In the user row, click Databricks SQL access.
+
+D)
+- Go to Admin Settings.
+- Click to the Users tab.
+- In the user row, click Databricks SQL access.
+D
+
+
+Select the statement which is TRUE?
+
+A) In case a transaction is not rolled back, the data allied with the table variable get rolled back.
+B) In case a transaction is rolled back, the data allied with the table variable also get rolled back.
+C) None of the above.
+D) In case a transaction is rolled back, the data allied with the table variable does not roll back.
+D
+
+
+Caching is an essential technique for improving the performance of data warehouse systems by avoiding the need to recompute or fetch the same data multiple times. Does Databricks SQL also use query caching techniques?
+
+A) Yes, Databricks SQL uses query caching to improve query performance, minimize cluster usage, and optimize resource utilization for a seamless data warehouse experience.
+
+B) Only the Gold layer of Databricks SQL uses query caching
+
+C) No, Databricks SQL does not need query caching as the speed at which the query is executed is 6x faster than data warehouse systems
+
+D) If the SQL Warehouse is created using Pro or Classic mode, query caching is enabled, it is disabled in serverless SQL warehouse
+A
+
+
+When an admin transfers ownership of a SQL warehouse to a new user, Which of the following permissions the new user should have in order to be an owner:
+
+A) Allow Database Creation entitlement
+B) Allow Table create/delete entitlement
+C) Allow Schema Creation entitlement
+D) Allow Cluster Creation entitlement
+D
+
+
+What does Unity Catalog automatically capture?
+A) User-level audit logs
+B) Data discovery
+C) Lineage data
+D) Operational data
+A
+
+
+When you drop an unmanaged table, you also delete the underlying data. Is this true or false?
+True
+False
+False
+
+
+What is the refresh behavior and execution context when the query is "Run as Viewer"?
+
+A)
+When a query is run with the privilege of "Run as Viewer" and a schedule is added, the owner's credential is used for execution and anyone with at least "Can Run" sees the results of those refreshed queries.
+
+B)
+When a query is run with the privilege of "Run as Viewer" and a schedule is added, the owner's credential is used for execution but only the owner sees the results of the refreshed queries; all other viewers must manually refresh to see updated query results.
+
+C)
+None of the above
+
+D)
+When a query is run with the privilege of "Run as Viewer" and a schedule is added, the executer's credential is used for execution and anyone with at least "Can Run" sees the results of the refreshed queries;
+B
+
+
+What is the difference between MIN and MAX functions?
+
+A) Both of the above
+B) MIN function is used to display the minimum data and MAX function is used to display the maximum data.
+C)MIN function is used to display the maximum data and MAX function is used to display the minimum data.
+D)None of the above
+B
+
+
+What is the refresh behavior and execution context when the query is "Run as Owner"?
+
+A)
+When a query is "Run as Owner" and a schedule is added, the owner's credential is used for execution and all other viewers must manually refresh to see the updated query
+
+B)
+"Run as Owner" can only be triggered by the Owner
+
+C)
+When a query is "Run as Owner" and a schedule is added, the owner's credential is used for execution and anyone with at least "Can Run" sees the results of those refreshed queries.
+
+D)
+When a query is "Run as Owner" and a schedule is added, the owner's credential is used for execution and only the owner can see the results of those refreshed queries.
+C
+
+
+Tables created on Databricks use the Delta Lake protocol by default. Is this true?
+Yes
+No
+Yes
+
+
+Account-level management of the Unity Catalog metastore means:
+
+A) schema, saved queries, and dashboard can be shared across Databricks workspaces.
+B) databases, tables, and views can be shared across Databricks workspaces.
+C) Delta lake will store meta information about declared schema or database
+D) databases, data objects, and permissions can be shared across Databricks workspaces.
+D
+
+
+A new data analyst da.analyst@company.com has been assigned to a Reporting project in your organization.
+You Manager has asked you to provide the new data analyst full privileges on the table sales to manage the project entirely.
+Which of the following commands can grant full permissions on the table to the new data analyst?
+
+
+A) GRANT ALL PRIVILEGES ON TABLE da.analyst@company.com TO sales;
+B) GRANT SELECT ON TABLE sales TO da.analyst@company.com;
+C) GRANT ALL PRIVILEGES ON TABLE sales TO da.analyst@company.com;
+D) GRANT SELECT CREATE MODIFY ON TABLE sales TO da.analyst@company.com;
+E) GRANT USAGE ON TABLE sales TO da.analyst@company.com;
+C
+
+
+Which of the following is one of the limitations of Delta Live Table?
+
+A) Delta Live Table can be defined multiple times, however, they can only be the target of a single operation
+B) Delta Live Tables tables can only be defined once
+C) Delta Live Table stores data in Delta format
+D) Delta Live Tables datasets are the streaming data, temporary views, and triggers
+B
+
+
+Which of the following is the correct syntax for writing unmanaged tables?
+
+A) CREATE TABLE table_name
+USING DELTA
+
+B) CREATE TABLE table_name
+USING DELTA
+LOCATION '/path/to/existing/data'
+
+C) CREATE TABLE table_name
+(field_name1 INT, field_name2 STRING)
+
+D) None of the above
+B
+
+
+What is the result of
+SELECT pink()
+WHERE pink() is SQL UDF
+
+CREATE FUNCTION pink()
+RETURNS STRING
+COMMENT 'Pink color code'
+LANGUAGE SQL
+RETURN 'FFC0CB'
+
+
+A) This is not a correct usage
+B) 'FFC0CB'
+C) UDFs are not supported in Databricks SQL
+D) 'Pink color code'
+B
+
+
+What is Data Imputation?
+
+A) This is a process that involves moving the data from bronze layer to silver layer
+B) This is a process that involves filling in missing data
+C) This is a process that involves adding additional information to the data
+D) This is a process that involves identifying or correcting the errors in the data
+B
+
+
+Which of the following is/are the benefit of Delta Lake?
+
+A) None of the above
+B) All of the above
+C) ACID Transactions
+D) Schema Enforcement
+E) Time Travel capabilities
+B
+
+
+What does ACID Stands for in Databricks SQL?
+A) Atomicity, Isolation, Consistency, Durability
+B) Atomicity, Isolation, Consistency, Data
+C) Atomicity, Isolation, Command, Durability
+D) Atomicity, Integrated, Consistency, Direct
+A
+
+
+You have a critical project with tight timelines and would like to know when the job run is completed at the earliest. Is it possible to trigger the alert with a frequency of as less as 1 min?
+
+A) No, it is not possible to have such frequent alerts
+B) It is possible, however, Databricks only supports scheduling alerts with frequency for as low as 5 mins
+C) It is possible, however, the smallest interval for which alerts can be scheduled in Databricks is 1 min
+D) Databricks can trigger alerts on hourly basis only
+C
+
+
+Which SQL Dialect does Databricks SQL use:
+
+A) ANSI standard SQL dialect
+B) Microsoft SQL Server
+C) PostgreSQL
+D) MySQL
+A
+
+
+What does streaming data mean in the context of Databricks Lakehouse?
+
+A) Databricks offers optimization real-time data ingestion, and processing, for streaming data
+B) Databricks stores data in a lakehouse
+C) Databricks offers third-party service(s) to handle streaming data
+D) Databricks does not support streaming data
+A
+
+
+Does Databricks allow federated queries from other systems?
+A) Yes, Databricks has partnered with a number of BI and visualization tools to support querying data in the Lakehouse
+B) No, Databricks only supports an in-house system to allow federated queries
+A
+
+
+A new data analyst has joined your team. He has recently been added to the company's Databricks workspace as da.analyst@company.com. The data analyst should be able to query the table sales in the database retail. The new data analyst has been granted USAGE on the database retail already.
+Which of the following commands can be used to grant the appropriate permission to the new data analyst?
+
+A)
+GRANT SELECT ON TABLE sales TO da.analyst@company.com;
+
+B)
+GRANT USAGE ON TABLE sales TO da.analyst@company.com;
+
+C)
+GRANT SELECT ON TABLE da.analyst@company.com TO sales;
+
+D)
+GRANT CREATE ON TABLE sales TO da.analyst@company.com.
+
+E)
+GRANT USAGE ON TABLE da.analyst@company.com TO sales;
+A
+
+
+Where does query federation fit in the Databricks lakehouse?
+
+A) Ad hoc reporting
+B) All the above
+C) None of the above
+D) Proof of concept work
+E) Developing new ETL pipelines or reports
+F) Supporting workloads during an incremental migration
+B
+
+
+What is Unity Catalog's security model based on?
+A) Familiar syntax
+B) User-level audit logs
+C) Data lake administration
+D) Standard ANSI SQL
+D
+
+
+If a dashboard's owner is removed from a workspace, the dashboard no longer has an owner. Who can assign a new owner to the dashboard?
+
+A) Only an admin user can manage the dashboard's permissions
+B) Only the team manager can assign a dashboard owner
+C) Only devops can assign a new dashboard owner
+D) Any team member can assign a new dashboard owner
+A
+
+
+If a dashboard's owner is removed from a workspace, the dashboard no longer has an owner. Who can assign a new owner to the dashboard?
+
+A) Only an admin user can manage the dashboard's permissions
+B) Only the team manager can assign a dashboard owner
+C) Only devops can assign a new dashboard owner
+D) Any team member can assign a new dashboard owner
+B
+
+
+Which layer tables in medallion architecture are "project specific" in nature?
+A) Silver
+B) Gold
+C) Platinum
+D) Bronze
+B
+
+
+Which of the following is not a component of the Unity Catalog?
+
+A) Data governance
+B) Data versioning
+C) Data auditing
+D) Data Sharing
+B
+
+
+Which layer in the medallion architecture corresponds to table structures "as-is," along with any additional metadata columns?
+
+A) Diamond layer
+B) Silver layer
+C) Gold layer
+D) Bronze layer
+D
+
+
+Which SQL statement is used to update data in a table?
+A) ALTER table_name SET column_name = value;
+B) UPDATE table_name SET column_name = value;
+C) MODIFY table_name SET column_name = value;
+D) CHANGE table_name SET column_name = value;
+B
+
+
+A data analyst has noticed that their Databricks SQL queries are running very slowly. They claim that this issue is impacting all of their sequentially run queries. They ask the data engineering team for help. The data engineering team notices that each of the queries uses the same SQL endpoint, but the SQL endpoint is not used by any other user.
+
+Which of the following approaches can the data engineering team use to improve the latency of the data analyst's queries?
+
+A) They can turn on the Auto Stop feature for the SQL endpoint.
+B) They can increase the cluster size of the SQL endpoint.
+C) They can increase the maximum bound of the SQL endpoint's scaling range.
+D) They can turn on the Serverless feature for the SQL endpoint and change the Spot Instance Policy to "Reliability Optimized."
+E) They can turn on the Serverless feature for the SQL endpoint.
+B
+
+
+Select the correct statement which will return all the rows from the Table and then also deletes the Table_Add table?
+
+A) SELECT * WHERE Table; DELETE TABLE Table_Add
+B) SELECT * WHERE Table; DROP TABLE Table_Add
+C) SELECT * FROM Table; DROP TABLE Table_Add
+D) SELECT * FROM Table; DELETE TABLE Table_Add
+C
+
+
+Which of the following clause cannot be used in SQL sub-queries?
+A) ORDER BY
+B) GROUP BY
+C) FROM
+D) DELETE
+A
+
+
+Which of the following is not the main component of Delta Table?
+A) Indexing
+B) ACID Transaction
+C) Data Governance
+D) Data Versioning
+C
+
+
+Your customer does not have access to the Databricks Infrastructure, however, your project management team wants to send some visualizations you have created, without giving the customer access to Databricks. Which of the following option you will choose?
+
+
+A) Add a refresh to the dashboard and add the customer email as a subscriber
+B) Take a screenshot of the dashboard and share the screenshot with customer over the email
+C) Export the dashboard as PDF and share the PDF with customers to get their feedback
+D) All of the above
+E) None of the above
+D
+
+
+Which of the following is NOT a part of summary statistics?
+
+A) Mode
+B) Standard deviation
+C) Mean
+D) Regression analysis
+E) Median
+D
+
+
+What is Data Enrichment?
+
+A) This is a process that involves identifying or correcting the errors in the data
+B) This is a process that involves adding additional information to the data
+C) This is a process that involves moving the data from the bronze layer to the silver layer
+D) This is a process that involves filling in missing data
+B
+
+
+Select the statement which is TRUE.
+
+A) In a table, there could be any number of columns and a specified number of rows.
+B) In a table, there could be any number of rows and any number of columns.
+C) In a table, there could be any number of rows and a specified number of columns.
+D) In a table, there could be a specified number of rows and a specified number of columns.
+C
+
+
+How can you review previous versions of the same query of a table in Delta Table?
+
+A) By Querying the tablename.history table in SQL Query Editor
+B) None of the above
+C) Delta Table does not store the previous version of the same query according to the unified governance rule
+D) Each write to a Delta table creates a new table version. You can use the transaction log to review modifications to your table and query previous table versions
+(Correct)
+D
+
+
+Which of the following Limitations of Delta sharing is correct?
+A) All of the above
+B) Sharing views is not supported
+C) None of the above
+D) Only tables stored in a Unity Catalog metastore can be shared using Delta Sharing.
+E) There are limits on the number of files in metadata allowed for a shared table
+F) Only tables in Delta format are supported. You can easily convert Parquet tables to Delta—and back again. See CONVERT TO DELTA.
+A
+
+
+Which of the following SQL functions is used to find the highest value in a column?
+A) MAX
+B) AVG
+C) SUM
+D) COUNT
+A
+
+
+What is data governance?
+A) None of the above
+B) Data governance is a comprehensive approach that comprises the principles, practices and tools to manage an organization's data assets throughout their lifecycle
+C) Data governance is applied to all data outside of databricks
+D) Data governance means governing the data present in the External table
+B
+
+
+What type of tokens cannot be used to automate Databricks account-level functionality?
+A) Service principals
+B) Username and password of Databricks account-level admins
+C) Databricks personal access tokens
+D) OAuth tokens for Databricks account admin users
+C
+
+
+Your customer does not have access to the Databricks Infrastructure, however, your project management team wants to send some visualizations you have created, without providing the customer access to Databricks. Which of the following options will you choose?
+
+A) Add a refresh schedule to the dashboard and add the customer email as a subscriber
+B) Create a PAT token and ask the customer to use it to access the dashboard
+C) Nothing can be done
+D) Share your login credentials with the customer and ask them to use your credentials to view the dashboard
+A
+
+
+Which of the following statements describes Delta Lake?
+A) Delta Lake is an open-source data storage format for distributed data.
+B) Delta Lake is an open-source platform to help manage the complete machine
+learning lifecycle.
+C) Delta Lake is an open-format storage layer that delivers reliability, security, and
+performance.
+D) Delta Lake is an open-source analytics engine used for big data workloads.
+C
+
+
+How do you see the Query Profile for a select run on SQL Editor?
+A) On the Query History Tab
+B) On the Data Tab
+C) On the SQL Warehouses Tab
+D) On the SQL Editor Tab
+A
+
+
+Using which tool offered by Databricks can you troubleshoot performance bottlenecks during the query execution?
+A) query parameters
+B) query task
+C) query profile
+D) query history
+C
+
+
+What is discrete statistics?
+A) A branch of statistics that focuses on summarizing and presenting data
+B) A branch of statistics that can take on only a finite amount of data
+C) A branch of statistics that focuses on predicting future data
+D) A branch of statistics that focuses on filling in missing data
+B
+
+
+Which of the following SQL clauses is used to sort the retrieved data in ascending or descending order?
+A) GROUP BY
+B) WHERE
+C) HAVING
+D) ORDER BY
+D
+
+
+Which of the following data workloads will utilize a Bronze table as its source?
+
+A) A job that queries aggregated data to publish key insights into a dashboard
+B) A job that aggregates cleaned data to create standard summary statistics
+C) A job that ingests raw data from a streaming source into the Lakehouse
+D) A job that enriches data by parsing its timestamps into a human-readable format
+E) A job that develops a feature set for a machine learning application
+D
+
+
+Which of the following SQL statements is used to add new data to a database?
+A) UPDATE
+B) SELECT
+C) DELETE
+D) INSERT
+D
+
+
+The company wants to send a customized message with the company logo and text. The project manager asked Data Analyst to find out if they can send customized emails from Databricks when any alerts are triggered. Is it possible?
+
+A) Databricks support custom template, which can be created using HTML to format the message before sending
+B) None of the above
+C) Databricks uses the template provided by AWS or Azure when sending email to user
+D) Databricks has its own alert team which is sent with the Databricks logo and text, and it cannot be edited
+A
+
+
+What are external tables used for in Unity Catalog?
+A) Managing privileges on managed tables
+B) Direct access to data using Databricks clusters
+C) Managing data lifecycle and file layout
+D) Registering large amounts of existing data
+D
+
+
+Which SQL keyword is used to remove duplicates from a result set?
+A) SELECT ALL
+B) SELECT UNIQUE
+C) SELECT DISTINCT
+D) SELECT DUPLICATE
+C

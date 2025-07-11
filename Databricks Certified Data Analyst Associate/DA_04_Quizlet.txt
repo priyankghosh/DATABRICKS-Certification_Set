@@ -1,0 +1,229 @@
+
+How can Databricks SQL Dashboards be used?
+As a place to display the results of multiple queries at once
+
+
+Describe the key audience for Databricks
+Data Scientists, Data Analysts and BI professionals
+
+
+Describe the side audience for Databricks
+Data Engineers and Data Admins
+
+
+What is a Stakeholder in Databricks dashboards?
+Someone who is granted permissions to view and share but not edit to a dashboard
+
+
+Benefits of using Databricks SQL for Lakehouse processing
+-Allows you to query data stored in data lakes and warehouses using SQL
+-Built on top of Lakehouse platform providing secure data transfer and analysis
+-High performance query engine for heavy workloads
+-Has additional visualization and dashboarding capabilities
+
+
+Describe how to complete a basic Databricks SQL query
+1. Open SQL editor
+2. Select a SQL warehouse
+3. Type in your query
+4. Click Run
+
+
+Where is SQL code written and run?
+In the Databricks SQL queries
+
+
+What can be accessed in the schema browser?
+Data Objects, databases, tables, columns and data types
+
+
+How can you create a Databricks SQL dashboard?
+Selecting the dashboard icon in the side window
+
+
+How can you automatically refresh a dashboard?
+Use the Schedule button in the top right corner
+
+
+What is the purpose of Databricks SQL endpoints/warehouses
+It provides general compute resources for SQL queries and visualization while endpoints allow for separation of resources from other workloads in Databricks
+
+
+Benefits of Serverless endpoints/warehouses
+They dont required a dedicated cluster to run, and can scale compute size based on needs
+
+
+What is Describe the trade-off between cluster size and cost for Databricks SQLendpoints/warehouses?
+Larger clusters can handle more concurrent queries and larger workloads, but also cost more to run
+
+
+What is Partner Connect?
+Alternative to manual partner connections. Used create connections to multiple trial azure accounts and technology partners
+
+
+How to connect Databricks SQL to ingestion tools like Fivetran
+Use Partner Connect to enter your information and set up a data destination. You can then follow the steps to configure a destination for Fivetran
+
+
+What is small-file upload?
+A solution for importing small text files like lookup tables and quick data integrations
+
+
+How to import from object storage using Databricks SQL
+Create an external table that references the data in object storage
+
+
+When can you ingest directories of files?
+When the files are the same type and have the same schema, DB reads all the files and combines them in a single table
+
+
+Describe how to connect Databricks SQL to visualization tools like Tableau, Power BI, and Looker
+Select a cluster and under the advanced options section configure the JDBC/ODBC driver
+
+
+Bronze Layer
+Used for ingesting raw/untouched messy data
+
+
+Silver Layer
+Used for Data that has been cleaned for machine learning and data science capabilities
+
+
+Gold Layer
+Used for data that has been cleaned for business intelligence purposes
+
+
+Describe the cautions and benefits of working with streaming data
+It provides real time quick and flexible insights, but also poses quality and consistency threats
+
+
+What is the benefit of mixing batch and streaming workloads via the Lakehouse?
+Allows you to build real time applications with live data while supporting historical analysis from batch
+
+
+Describe Delta Lake as a tool for managing data files
+Provides ACID transactions, is highly scalable, supports schema evolution and provides tools for managing data files with VACUUM and OPTIMISE
+
+
+How does Delta Lake support version history?
+It creates a new table version with each operation made to the given data. It can be retrieved using history command
+
+
+What is a Global Table?
+Tables that are available across all clusters in a workspace and can be accessed by all users with the appropriate permissions
+
+
+What is a Cluster Table?
+scoped tables are available only within a specific cluster and are not visible to other clusters or users
+
+
+What is a Notebook Table
+scoped tables are available only within a specific notebook and are not visible to other notebooks or users
+
+
+What is a Managed Table?
+Tables handled by DB platform that are optimized for small to medium sized datasets
+
+
+What is an Unmanaged Table
+Tables not handled by DB platform that are more flexible and better for large sized datasets
+
+
+What does the LOCATION keyword do?
+Allows you to specify that specific location for a table in a database
+
+
+Describe how to create a database in SQL
+CREATE DATABASE/TABLE/VIEW ____
+
+
+Describe how to use a database in SQL
+USE DATABASE/TABLE/VIEW____
+
+
+Describe how to drop a database in SQL
+DROP DATABASE/TABLE/VIEW____
+
+
+What is a view?
+A quick logical representation of the data stored in a table. It is persisted in underlying tables that dont store data
+
+
+What is a temp view?
+A quick screenshot of the data stored in the table. It doesnt reflect changes to the underlying data
+
+
+Describe how to identify the owner of a table using SQL
+ALTER TABLE ____ OWNER TO ____
+
+
+What are the responsibilities of a table owner?
+Create, monitor and manage a table while continuously ensuring data quality. They also control access permissions and ensure compliance
+
+
+What doe ACID stand for?
+Atomicity, Consistency Isolation and Durability
+
+
+What does MERGE INTO do?
+Merges data from target source to data table based on specified conditions
+
+
+What does INSERT TABLE do?
+Used to insert new rows into tables
+
+
+What does COPY INTO do?
+Used to load data into a Delta table
+
+
+What does ROLLUP do?
+Used with GROUP BY to show an aggregation of multiple grouped values
+
+
+What does CUBE do?
+Used with GROUP BY to show an aggregation across multiple grouped values while displaying a grand total for each
+
+
+How do you create and apply UDFs in common scaling scenarios
+First define the python function, then register as a udf, finally apply it in your SQL code
+
+
+What is Unity Catalog?
+A unified governance solution for the Lakehouse. It provides centralized access control, auditing, lineage, and data discovery capabilities across Azure Databricks workspaces
+
+
+Why would you want to use a MANAGED LOCATION?
+To define the cloud object storage location for data of managed tables and volumes
+
+
+How is PII handled in Databricks?
+By using Delta Lake features and fine grained controls
+
+
+What does the TRANFORM function do?
+Allows you to apply a lambda function to transform array elements
+
+
+What does the EXPLODE function do?
+Allows you to expand elements of a nested array into its own rows
+
+
+Which takes precedence when they conflict, a configured refresh rate or the selected Auto Stop feature?
+The configured refresh rate
+
+
+How does Delta Lake manage metadata in Databricks
+By maintaining a transaction log to record changes
+
+
+Describe Widget Parameters
+They are tied to one visualization and change only the query affecting it
+
+
+Describe Dashboard Parameters
+Configured at the dashboard level, they can impact multiple visualizations at one time
+
+
+Describe Static Values
+They are used to override parameters by setting a fixed value in their place
