@@ -1,12 +1,23 @@
 Take Your Data Engineering Skills To The Next Level
-A data engineer certification provides evidence that you possess the necessary skills for your job. Even if you are already employed in data engineering, it serves as validation of your knowledge and opens up new opportunities. Databricks allows you to prepare for both the data engineer associate and professional certifications, allowing you to enhance your current skills and acquire new ones as technology progresses. While the demand for data engineers is high, having credentials that distinguish you is still beneficial. Obtaining a data engineer certification demonstrates your dedication and effort in acquiring new skills, and it is also a rewarding achievement. Whether you are seeking a beginner-level data engineer certification or aiming for a professional data engineer certification, Databricks is there to assist you in learning the relevant skills and successfully passing the exam.
+A data engineer certification provides evidence that you possess the necessary skills for your job. Even if you are already employed 
+in data engineering, it serves as validation of your knowledge and opens up new opportunities. Databricks allows you to prepare for 
+both the data engineer associate and professional certifications, allowing you to enhance your current skills and acquire new ones as 
+echnology progresses. While the demand for data engineers is high, having credentials that distinguish you is still beneficial. 
+Obtaining a data engineer certification demonstrates your dedication and effort in acquiring new skills, and it is also a rewarding 
+achievement. Whether you are seeking a beginner-level data engineer certification or aiming for a professional data engineer 
+certification, Databricks is there to assist you in learning the relevant skills and successfully passing the exam.
 Certification Exams
 - Data Engineer Associate certification
 - Data Engineer Professional certificat
 
 
 What Is Databricks Certified Data Engineer Associate?
-The Databricks Certified Data Engineer Associate certification exam assesses an individual's ability to use the Databricks Lakehouse Platform to complete introductory data engineering tasks. This includes an understanding of the Lakehouse Platform and its workspace, its architecture, and its capabilities. It also assesses the ability to perform multi-hop architecture ETL tasks using Apache Spark? SQL and Python in both batch and incrementally processed paradigms. Finally, the exam assesses the tester's ability to put basic ETL pipelines and Databricks SQL queries and dashboards into production while maintaining entity permissions. Individuals who pass this certification exam can be expected to complete basic data engineering tasks using Databricks and its associated tools.
+The Databricks Certified Data Engineer Associate certification exam assesses an individual's ability to use the Databricks Lakehouse 
+Platform to complete introductory data engineering tasks. This includes an understanding of the Lakehouse Platform and its workspace, 
+its architecture, and its capabilities. It also assesses the ability to perform multi-hop architecture ETL tasks using Apache Spark? 
+SQL and Python in both batch and incrementally processed paradigms. Finally, the exam assesses the tester's ability to put basic ETL 
+pipelines and Databricks SQL queries and dashboards into production while maintaining entity permissions. Individuals who pass this 
+certification exam can be expected to complete basic data engineering tasks using Databricks and its associated tools.
 
 
 About The Databricks Certified Data Engineer Associate Exam
@@ -31,7 +42,7 @@ Section 5: Workloads with Workflows
 Section 6: Data Access with Unity Catalog
 
 
-A data engineer needs to use a Delta table as part of a data pipeline, but they do not know if they have the appropriate permissions.
+Q1. A data engineer needs to use a Delta table as part of a data pipeline, but they do not know if they have the appropriate permissions.
 In which of the following locations can the data engineer review their permissions on the table?
 A.Databricks Filesystem
 B.Jobs
@@ -41,15 +52,19 @@ E.Data Explorer
 Answer: E
 
 
-A data engineer is designing a data pipeline. The source system generates files in a shared directory that is also used by other processes. As a result, the files should be kept as is and will accumulate in the directory. The data engineer needs to identify which files are new since the previous run in the pipeline, and set up the pipeline to only ingest those new files with each run.
+Q2. A data engineer is designing a data pipeline. The source system generates files in a shared directory that is also used by other 
+processes. As a result, the files should be kept as is and will accumulate in the directory. The data engineer needs to identify 
+which files are new since the previous run in the pipeline, and set up the pipeline to only ingest those new files with each run.
 Which of the following tools can the data engineer use to solve this problem?
 A.Unity Catalog
 B.Delta Lake
-C.Dat
+C.Databricks SQL
+D.Data Explorer
+E.Auto Loader
 Answer: E
 
 
-Which of the following benefits is provided by the array functions from Spark SQL?
+Q3. Which of the following benefits is provided by the array functions from Spark SQL?
 A.An ability to work with data in a variety of types at once
 B.An ability to work with data within certain partitions and windows
 C.An ability to work with time-related data in specified intervals
@@ -58,7 +73,9 @@ E.An ability to work with an array of tables for procedural automation
 Answer: D
 
 
-A data engineer wants to create a relational object by pulling data from two tables. The relational object does not need to be used by other data engineers in other sessions. In order to save on storage costs, the data engineer wants to avoid copying and storing physical data.
+Q4. A data engineer wants to create a relational object by pulling data from two tables. The relational object does not need to be used by 
+other data engineers in other sessions. In order to save on storage costs, the data engineer wants to avoid copying and storing 
+physical data.
 Which of the following relational objects should the data engineer create?
 A.Spark SQL Table
 B.View
@@ -68,7 +85,8 @@ E.Delta Table
 Answer: D
 
 
-A data engineer needs access to a table new_table, but they do not have the correct permissions. They can ask the table owner for permission, but they do not know who the table owner is.
+Q5. A data engineer needs access to a table new_table, but they do not have the correct permissions. They can ask the table owner for 
+permission, but they do not know who the table owner is.
 Which of the following approaches can be used to identify the owner of new_table?
 A.Review the Permissions tab in the table's page in Data Explorer
 B.All of these options can be used to identify the owner of the table
@@ -77,7 +95,8 @@ D.Review the Owner field in the t
 Answer: C
 
 
-A new data engineering team team has been assigned to an ELT project. The new data engineering team will need full privileges on the table sales to fully manage the project.
+Q6. A new data engineering team team has been assigned to an ELT project. The new data engineering team will need full privileges on the 
+table sales to fully manage the project.
 Which of the following commands can be used to grant full permissions on the database to the new data engineering team?
 A.GRANT ALL PRIVILEGES ON TABLE sales TO team;
 B.GRANT SELECT CREATE MODIFY ON TABLE sales TO team;
@@ -87,26 +106,40 @@ E.GRANT ALL PRIVILEGES ON TAB
 Answer: A
 
 
-A data organization leader is upset about the data analysis team's reports being different from the data engineering team's reports. The leader believes the siloed nature of their organization's data engineering and data analysis architectures is to blame.
+Q7. A data organization leader is upset about the data analysis team's reports being different from the data engineering team's reports. 
+The leader believes the siloed nature of their organization's data engineering and data analysis architectures is to blame.
 Which of the following describes how a data lakehouse could alleviate this issue?
-A.Both teams would autoscale their work as data size evolves
-B.Both teams would use the same source of truth for their work
-C.Both teams would reorganize t
+A. Both teams would autoscale their work as data size evolves
+B. Both teams would use the same source of truth for their work
+C. Both teams would reorganize to report to the same department
+D. Both teams would be able to collaborate on projects in real-time
+E. Both teams would respond more quickly to ad-hoc requests
 Answer: B
 
 
-A data engineer has been using a Databricks SQL dashboard to monitor the cleanliness of the input data to a data analytics dashboard for a retail use case. The job has a Databricks SQL query that returns the number of store-level records where sales is equal to zero. The data engineer wants their entire team to be notified via a messaging webhook whenever this value is greater than 0.
+Q8. A data engineer has been using a Databricks SQL dashboard to monitor the cleanliness of the input data to a data analytics dashboard 
+for a retail use case. The job has a Databricks SQL query that returns the number of store-level records where sales is equal to zero. 
+The data engineer wants their entire team to be notified via a messaging webhook whenever this value is greater than 0.
 Which of the following approaches can the data engineer use to notify their entire team via a messaging webhook
-Answer: D
+A. They can set up an Alert with a custom template.
+B. They can set up an Alert with a new email alert destination.
+C. They can set up an Alert with a new webhook alert destination.
+D. They can set up an Alert with one-time notifications.
+E. They can set up an Alert without notifications.
+Answer: C
 
 
-A data engineer has three tables in a Delta Live Tables (DLT) pipeline. They have configured the pipeline to drop invalid records at each table. They notice that some data is being dropped due to quality concerns at some point in the DLT pipeline. They would like to determine at which table in their pipeline the data is being dropped.
+Q9. A data engineer has three tables in a Delta Live Tables (DLT) pipeline. They have configured the pipeline to drop invalid records at each table. They notice that some data is being dropped due to quality concerns at some point in the DLT pipeline. They would like to determine at which table in their pipeline the data is being dropped.
 Which of the following approaches can the data engineer take to identify the table that is dropping the records?
-A.They can set up separate expectations for each t
+A. They can set up separate expectations for each table when developing their DLT pipeline.
+B. They cannot determine which table is dropping the records.
+C. They can set up DLT to notify them via email when records are dropped.
+D. They can navigate to the DLT pipeline page, click on each table, and view the data quality statistics.
+E. They can navigate to the DLT pipeline page, click on the “Error” button, and review the present errors.
 Answer: D
 
 
-Which of the following tools is used by Auto Loader process data incrementally?
+Q10. Which of the following tools is used by Auto Loader process data incrementally?
 A.Checkpointing
 B.Spark Structured Streaming
 C.Data Explorer
@@ -114,7 +147,4 @@ D.Unity Catalog
 E.Databricks SQL
 Answer: B
 
-
-With the help of these Databricks Certified Data Engineer Associate Exam Dumps, you can effectively prepare yourself and increase your chances of success in the certification exam.
-https://www.passcert.com/Databricks-Certified-Data-Engineer-Associate.html
 

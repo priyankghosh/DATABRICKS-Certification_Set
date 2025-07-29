@@ -4,39 +4,35 @@ A. A data lakehouse provides a relational system of data management.
 B. A data lakehouse captures snapshots of data for version control purposes.
 C. A data lakehouse couples storage and compute for complete control.
 D. A data lakehouse utilizes proprietary storage formats for data.
-E. A data lakehouse enables both batch and streaming analytics.
-E. A data lakehouse enables both batch and streaming analytics.
+=> E. A data lakehouse enables both batch and streaming analytics.
 
 
 Question 2
 Which of the following locations hosts the driver and worker nodes of a Databricks-managed cluster?
-A. Data plane
+=> A. Data plane
 B. Control plane
 C. Databricks Filesystem
 D. JDBC data source
 E. Databricks web application
-A. Data plane
-
 
 
 Question 3
-A data architect is designing a data model that works for both video-based machine learning workloads and highly audited batch ETL/ELT workloads.
+A data architect is designing a data model that works for both video-based machine learning workloads and highly audited batch 
+ETL/ELT workloads.
 Which of the following describes how using a data lakehouse can help the data architect meet the needs of both workloads?
 A. A data lakehouse requires very little data modeling.
 B. A data lakehouse combines compute and storage for simple governance.
 C. A data lakehouse provides autoscaling for compute clusters.
-D. A data lakehouse stores uns
-D. A data lakehouse stores unstructured data and is ACID-compliant.
+=> D. A data lakehouse stores unstructured data and is ACID-compliant.
 
 
 Question 4
 Which of the following describes a scenario in which a data engineer will want to use a Job cluster instead of an all-purpose cluster?
 A. An ad-hoc analytics report needs to be developed while minimizing compute costs.
 B. A data team needs to collaborate on the development of a machine learning model.
-C. An automated workflow needs to be run every 30 minutes.
+=> C. An automated workflow needs to be run every 30 minutes.
 D. A Databricks SQL query needs to be scheduled for upward reporting.
 E. A data engineer needs to manually investigate a produc
-C. An automated workflow needs to be run every 30 minutes.
 
 
 Question 5
@@ -44,18 +40,16 @@ A data engineer has created a Delta table as part of a data pipeline. Downstream
 Assuming the data engineer is the Delta table owner, which part of the Databricks Lakehouse Platform can the data engineer use to grant the data analysts the appropriate access?
 A. Repos
 B. Jobs
-C. Data Explorer
+=> C. Data Explorer
 D. Databricks Filesystem
 E. Dashboards
-C. Data Explorer
 
 
 Question 6
 Two junior data engineers are authoring separate parts of a single data pipeline notebook. They are working on separate Git branches so they can pair program on the same notebook simultaneously. A senior data engineer experienced in Databricks suggests there is a better alternative for this type of collaboration.
 Which of the following supports the senior data engineer's claim?
 A. Databricks Notebooks support automatic change-tracking and versioning
-B. Databricks Notebooks support rea
-B. Databricks Notebooks support real-time coauthoring on a single notebook
+=> B. Databricks Notebooks support real-time co-authoring on a single notebook
 
 
 Question 7
@@ -64,37 +58,34 @@ A. Databricks Repos can facilitate the pull request, review, and approval proces
 B. Databricks Repos can merge changes from a secondary Git branch into a main Git branch
 C. Databricks Repos can be used to design, develop, and trigger Git automation pipelines
 D. Databricks Repos can store the single-source-of-truth Git repository
-E. Da
-E. Databricks Repos can commit or push code changes to trigger a CI/CD process
+=> E. Databricks Repos can commit or push code changes to trigger a CI/CD process
 
 
 Question 8
 Which of the following statements describes Delta Lake?
 A. Delta Lake is an open source analytics engine used for big data workloads.
-B. Delta Lake is an open format storage layer that delivers reliability, security, and performance.
+=> B. Delta Lake is an open format storage layer that delivers reliability, security, and performance.
 C. Delta Lake is an open source platform to help manage the complete machine learning lifecycle.
 D. Delta Lake is an open source data storage format for distributed data.
 E. Delta Lake is an open format storage layer that processes data.
-B. Delta Lake is an open format storage layer that delivers reliability, security, and performance.
 
 
 Question 9
 A data architect has determined that a table of the following format is necessary:
+...
 id birthDate avgRating
 a1 1990-01-06 5.5
 a2 1974-11-21 7.1
 ...
-Which of the following code blocks uses SQL DDL commands to create an empty Delta table in the above format regardless of whether a table already exists with this name?
+
+Which of the following code blocks uses SQL DDL commands to create an empty Delta table in the above format regardless of whether a 
+table already exists with this name?
 A. CREATE OR REPLACE TABLE table_name AS SELECT
 id STRING,
 birthDate DATE,
 avgRating FLOAT
 USING DELTA
-B. CREATE OR REPLACE TABLE table_name (
-id STRING,
-birthDate DATE,
-avgR
-B. CREATE OR REPLACE TABLE table_name (
+=> B. CREATE OR REPLACE TABLE table_name (
 id STRING,
 birthDate DATE,
 avgRating FLOAT
@@ -105,33 +96,35 @@ Question 10
 Which of the following SQL keywords can be used to append new rows to an existing Delta table?
 A. UPDATE
 B. COPY
-C. INSERT INTO
+=> C. INSERT INTO
 D. DELETE
 E. UNION
-C. INSERT INTO
 
 
 Question 11
-A data engineering team needs to query a Delta table to extract rows that all meet the same condition. However, the team has noticed that the query is running slowly. The team has already tuned the size of the data files. Upon investigating, the team has concluded that the rows meeting the condition are sparsely located throughout each of the data files.
+A data engineering team needs to query a Delta table to extract rows that all meet the same condition. However, the team has noticed 
+that the query is running slowly. The team has already tuned the size of the data files. Upon investigating, the team has concluded 
+that the rows meeting the condition are sparsely located throughout each of the data files.
 Based on the scenario, which of the following optimization techniques could speed up the query?
 A. Data skipping
-B. Z-Ordering
+=> B. Z-Ordering
 C. B
-B. Z-Ordering
 
 
 Question 12
-A data engineer needs to create a database called customer360 at the location /customer/customer360. The data engineer is unsure if one of their colleagues has already created the database.
+A data engineer needs to create a database called customer360 at the location '/customer/customer360'. The data engineer is unsure if 
+one of their colleagues has already created the database.
 Which of the following commands should the data engineer run to complete this task?
 A. CREATE DATABASE customer360 LOCATION '/customer/customer360';
 B. CREATE DATABASE IF NOT EXISTS customer360;
 C. CREATE DATABASE IF NOT EXISTS customer360 LOCATION '/customer/customer360';
 D. CREATE DATABASE IF NO
-C. CREATE DATABASE IF NOT EXISTS customer360 LOCATION '/customer/customer360';
+=> CREATE TABLE my_table (id STRING, value STRING);
 
 
 Question 13
-A junior data engineer needs to create a Spark SQL table my_table for which Spark manages both the data and the metadata. The metadata and data should also be stored in the Databricks Filesystem (DBFS).
+A junior data engineer needs to create a Spark SQL table `my_table` for which Spark manages both the data and the metadata. The 
+metadata and data should also be stored in the Databricks Filesystem (DBFS).
 Which of the following commands should a senior data engineer share with the junior data engineer to complete this task?
 A. CREATE TABLE my_table (id STRING, value STRING) USING org.apache.spark.sql.parquet OPTIONS (PATH "storage-path");
 B. CREATE MANAGED TABLE my_table (id STRING, va
@@ -139,23 +132,22 @@ E. CREATE TABLE my_table (id STRING, value STRING);
 
 
 Question 14
-A data engineer wants to create a relational object by pulling data from two tables. The relational object must be used by other data engineers in other sessions. In order to save on storage costs, the data engineer wants to avoid copying and storing physical data.
+A data engineer wants to create a relational object by pulling data from two tables. The relational object must be used by other data 
+engineers in other sessions. In order to save on storage costs, the data engineer wants to avoid copying and storing physical data.
 Which of the following relational objects should the data engineer create?
-A. View
+=> A. View
 B. Temporary view
 C. Delta Table
 D. Database
 E. Spark SQL Table
-A. View
 
 
 Question 15
-A data engineering team has created a series of tables using Parquet data stored in an external system. The team is noticing that after appending new rows to the data in the external system, their queries within Databricks are not returning the new rows. They identify the caching of the previous data as the cause of this issue.
+A data engineering team has created a series of tables using Parquet data stored in an external system. The team is noticing that 
+after appending new rows to the data in the external system, their queries within Databricks are not returning the new rows. They 
+identify the caching of the previous data as the cause of this issue.
 Which of the following approaches will ensure that the data returned by queries is always up-to-date?
-
-A. The tables should be converted to the Delta format
-B
-A. The tables should be converted to the Delta format
+=> A. The tables should be converted to the Delta format
 
 
 Question 16
@@ -167,39 +159,39 @@ CREATE TABLE customersPerCountry AS SELECT country,
 COUNT(*) AS customers FROM customerLocations
 GROUP BY country;
 
-A junior data engineer asks why the schema is not being declared for the new table. Which of the following responses explains why declaring the schema is not neces
-A. CREATE TABLE AS SELECT statements adopt schema details from the source table and query.
+A junior data engineer asks why the schema is not being declared for the new table. Which of the following responses explains why 
+declaring the schema is not necessary
+=> A. CREATE TABLE AS SELECT statements adopt schema details from the source table and query.
 
 
 Question 17
-A data engineer is overwriting data in a table by deleting the table and recreating the table. Another data engineer suggests that this is inefficient and the table should simply be overwritten instead.
+A data engineer is overwriting data in a table by deleting the table and recreating the table. Another data engineer suggests that 
+this is inefficient and the table should simply be overwritten instead.
 
 Which of the following reasons to overwrite the table instead of deleting and recreating the table is incorrect?
 A. Overwriting a table is efficient because no files need to be deleted.
-B. Overwriting a table results in a clean table history for logging and audit purposes.
+=> B. Overwriting a table results in a clean table history for logging and audit purposes.
 C. Overwri
-B. Overwriting a table results in a clean table history for logging and audit purposes.
 
 
 Question 18
 Which of the following commands will return records from an existing Delta table my_table where duplicates have been removed?
 A. DROP DUPLICATES FROM my_table;
 B. SELECT * FROM my_table WHERE duplicate = False;
-C. SELECT DISTINCT * FROM my_table;
+=> C. SELECT DISTINCT * FROM my_table;
 D. MERGE INTO my_table a USING new_records b ON a.id = b.id WHEN NOT MATCHED THEN INSERT *;
 E. MERGE INTO my_table a USING new_records b;
-C. SELECT DISTINCT * FROM my_table;
 
 
 Question 19
-A data engineer wants to horizontally combine two tables as a part of a query. They want to use a shared column as a key column, and they only want the query result to contain rows whose value in the key column is present in both tables.
+A data engineer wants to horizontally combine two tables as a part of a query. They want to use a shared column as a key column, and 
+they only want the query result to contain rows whose value in the key column is present in both tables.
 Which of the following SQL commands can they use to accomplish this task?
-A. INNER JOIN
+=> A. INNER JOIN
 B. OUTER JOIN
 C. LEFT JOIN
 D. MERGE
 E. UNION
-A. INNER JOIN
 
 
 Question 20
@@ -211,7 +203,7 @@ cart_id STRING, item_id STRING
 Which of the following commands should the junior data engineer run to complete this task?
 A. SELECT cart_id, filter(items) AS item_id FROM raw_table;
 B. SELECT cart_id, flatten(items) AS
-D. SELECT cart_id, explode(items) AS item_id FROM raw_table;
+=> D. SELECT cart_id, explode(items) AS item_id FROM raw_table;
 
 
 Question 21
@@ -221,8 +213,7 @@ The data engineer wants to efficiently extract the date of each transaction into
 transaction_id STRING, date TIMESTAMP
 Which of the following commands should the data engineer run to complete this task?
 A. SELECT transaction_id, explode(payload) FROM raw_table;
-B. SELECT
-B. SELECT transaction_id, payload.date FROM raw_table;
+=> B. SELECT transaction_id, payload.date FROM raw_table;
 
 
 Question 22
@@ -231,16 +222,15 @@ SELECT district, avg(sales)
 FROM store_sales_20220101 GROUP BY district;
 The data analyst would like the data engineering team to run this query every day. The date at the end of the table name (20220101) should automatically be replaced with the current date each time the query is run.
 Which of the following approaches could be used by the data engineering team to efficiently automate this proces
-A. They could wrap the query using PySpark and use Python's string variable system to automatically update the table name.
+=> A. They could wrap the query using PySpark and use Python's string variable system to automatically update the table name.
 
 
 Question 23
 A data engineer has ingested data from an external source into a PySpark DataFrame raw_df. They need to briefly make this data available in SQL for a data analyst to perform a quality assurance check on the data.
 Which of the following commands should the data engineer run to make this data available in SQL for only the remainder of the Spark session?
-A. raw_df.createOrReplaceTempView("raw_df") B. raw_df.createTable("raw_df")
+=> A. raw_df.createOrReplaceTempView("raw_df") B. raw_df.createTable("raw_df")
 C. raw_df.write.save("raw_df")
-D. raw_df.saveAsTable("raw_
-A. raw_df.createOrReplaceTempView("raw_df") B. raw_df.createTable("raw_df")
+D. raw_df.saveAsTable("raw_df")
 
 
 Question 24
@@ -250,9 +240,8 @@ Which of the following commands should the data engineer use to construct the ta
 A. "{region}+{store}+_sales_+{year}"
 B. f"{region}+{store}+_sales_+{year}"
 C. "{region}{store}_sales_{year}"
-D. f"{region}{store}_sales_{year}"
+=> D. f"{region}{store}_sales_{year}"
 E. {region}+{sto
-D. f"{region}{store}_sales_{year}"
 
 
 Question 25
@@ -265,9 +254,8 @@ A data engineer has developed a code block to perform a streaming read on a data
 )
 The code block is returning an error.
 Which of the following changes should be made to the code block to configure the block to successfully perform a streaming read?
-A. The .read line should be replaced with .readStream.
+=> A. The `.read` line should be replaced with `.readStream`.
 B. A new .stream line should be added after
-A. The .read line should be replaced with .readStream.
 
 
 Question 26
@@ -288,7 +276,7 @@ A data engineer is designing a data pipeline. The source system generates files 
 Which of the following tools can the data engineer use to solve this problem?
 A. Databricks SQL
 B. D
-E. Auto Loader
+=> E. Auto Loader
 
 
 Question 28
@@ -304,8 +292,7 @@ A. A job that aggregates cleaned data to create standard summary statistics
 B. A job that queries aggregated data to publish key insights into a dashboard
 C. A job that ingests raw data from a streaming source into the Lakehouse
 D. A job that develops a feature set for a machine learning application
-E. A job that enriches data by parsing its timestamps into a human-readable format
-E. A job that enriches data by parsing its timestamps into a human-readable format
+=> E. A job that enriches data by parsing its timestamps into a human-readable format
 
 
 Question 30
@@ -313,9 +300,8 @@ Which of the following data workloads will utilize a Silver table as its source?
 A. A job that enriches data by parsing its timestamps into a human-readable format
 B. A job that queries aggregated data that already feeds into a dashboard
 C. A job that ingests raw data from a streaming source into the Lakehouse
-D. A job that aggregates cleaned data to create standard summary statistics
+=> D. A job that aggregates cleaned data to create standard summary statistics
 E. A job that cleans data by removing malformatted records
-D. A job that aggregates cleaned data to create standard summary statistics
 
 
 Question 31
@@ -340,20 +326,18 @@ C. (spark.table("sales")
 
 Question 32
 Which of the following benefits does Delta Live Tables provide for ELT pipelines over standard data pipelines that utilize Spark and Delta Lake on Databricks?
-A. The ability to declare and maintain data table dependencies
+=> A. The ability to declare and maintain data table dependencies
 B. The ability to write pipelines in Python and/or SQL
 C. The ability to access previous versions of data tables
 D. The ability to automatically scale compute resources
 E. The ability to perform batch and streaming queries
-A. The ability to declare and maintain data table dependencies
 
 
 Question 33
 A data engineer has three notebooks in an ELT pipeline. The notebooks need to be executed in a specific order for the pipeline to complete successfully. The data engineer would like to use Delta Live Tables to manage this process.
 Which of the following steps must the data engineer take as part of implementing this pipeline using Delta Live Tables?
 A. They need to create a Delta Live Tables pipeline from the Data page.
-B. They need to create a Delta Live Tables pipeline from the Jobs
-B. They need to create a Delta Live Tables pipeline from the Jobs page.
+=> B. They need to create a Delta Live Tables pipeline from the Jobs page.
 
 
 Question 34
@@ -363,17 +347,15 @@ FROM json.`/path/to/json/file.json`;
 The data engineer asks a colleague for help to convert this query for use in a Delta Live Tables (DLT) pipeline. The query should create the first table in the DLT pipeline.
 Which of the following describes the change the colleague needs to make to the query?
 A. They need to add a COMMENT line at the beginning of the query.
-B. They need to add a CREATE LIVE TABLE table_name AS line at the b
-B. They need to add a CREATE LIVE TABLE table_name AS line at the beginning of the query.
+=> B. They need to add a CREATE LIVE TABLE table_name AS line at the beginning of the query.
 
 
 Question 35
 A dataset has been defined using Delta Live Tables and includes an expectations clause:
 CONSTRAINT valid_timestamp EXPECT (timestamp > '2020-01-01')
 What is the expected behavior when a batch of data containing data that violates these constraints is processed?
-A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.
+=> A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.
 B. Records that violate the expectation are dropped from the target dataset and recorded as invalid in the event
-A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.
 
 
 Question 36
@@ -396,9 +378,8 @@ D. They can institute a retry policy for the task that periodically fails
 Question 38
 A data engineer has set up two Jobs that each run nightly. The first Job starts at 12:00 AM, and it usually completes in about 20 minutes. The second Job depends on the first Job, and it starts at 12:30 AM. Sometimes, the second Job fails when the first Job does not complete by 12:30 AM.
 Which of the following approaches can the data engineer use to avoid this problem?
-A. They can utilize multiple tasks in a single job with a linear dependency
+=> A. They can utilize multiple tasks in a single job with a linear dependency
 B. They can use cluster pools to help th
-A. They can utilize multiple tasks in a single job with a linear dependency
 
 
 Question 39
@@ -406,8 +387,7 @@ A data engineer has set up a notebook to automatically process using a Job. The 
 Which of the following approaches can the data engineer use to obtain a version-controllable configuration of the Job's schedule?
 A. They can link the Job to notebooks that are a part of a Databricks Repo.
 B. They can submit the Job once on a Job cluster.
-C. They can download the JSON description of the Job from the Job's
-C. They can download the JSON description of the Job from the Job's page.
+=> C. They can download the JSON description of the Job from the Job's page.
 
 
 Question 40
@@ -421,8 +401,7 @@ Question 41
 An engineering manager uses a Databricks SQL query to monitor their team's progress on fixes related to customer-reported bugs. The manager checks the results of the query every day, but they are manually rerunning the query each day and waiting for the results.
 Which of the following approaches can the manager use to ensure the results of the query are updated each day?
 A. They can schedule the query to run every 1 day from the Jobs UI.
-B. They can schedule the query to refresh ever
-B. They can schedule the query to refresh every 1 day from the query's page in Databricks SQL.
+=> B. They can schedule the query to refresh every 1 day from the query's page in Databricks SQL.
 
 
 Question 42
@@ -450,8 +429,7 @@ C. GRANT SELECT ON TABLE sales TO new.engineer@company.com;
 Question 45
 A new data engineer new.engineer@company.com has been assigned to an ELT project. The new data engineer will need full privileges on the table sales to fully manage the project.
 Which of the following commands can be used to grant full permissions on the table to the new data engineer?
-A. GRANT ALL PRIVILEGES ON TABLE sales TO new.engineer@company.com;
+=> A. GRANT ALL PRIVILEGES ON TABLE sales TO new.engineer@company.com;
 B. GRANT USAGE ON TABLE sales TO new.engineer@company.com;
 C. GRANT ALL PRIVILEGES ON TABLE new.engineer@company.com TO sales;
 D. GRA
-A. GRANT ALL PRIVILEGES ON TABLE sales TO new.engineer@company.com;
