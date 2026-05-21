@@ -1,4 +1,5 @@
-# Interview Set: Databricks Interview and Practical Scenario/Code based questions
+# Interview Set
+## Databricks Interview and Practical Scenario/Code based questions for certification
 
-![intro](./intro.webp)
+![intro](./Imgs/intro.webp)
 
